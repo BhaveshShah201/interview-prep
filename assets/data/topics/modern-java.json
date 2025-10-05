@@ -1,0 +1,106 @@
+{
+  "title": "Modern Java (8-21) Advanced Features",
+  "subtopics": [
+    {
+      "name": "Functional Programming",
+      "details": [
+        "Method references and lambda internals",
+        "Functional interfaces design patterns",
+        "Combinator pattern",
+        "Currying and partial application",
+        "Monads in Java (Optional, Stream, CompletableFuture)",
+        "Functional programming best practices",
+        "Higher-order functions",
+        "Immutability and pure functions",
+        "Functional vs imperative performance",
+        "Functional error handling with Either pattern"
+      ]
+    },
+    {
+      "name": "Streams API Mastery",
+      "details": [
+        "Stream internals and spliterators",
+        "Parallel streams and performance",
+        "Custom collectors",
+        "Lazy evaluation and short-circuiting",
+        "Stream debugging techniques",
+        "Primitive specializations (IntStream, LongStream, DoubleStream)",
+        "Grouping, partitioning, and downstream collectors",
+        "Performance considerations and complexity analysis",
+        "Stream chaining and intermediate operations",
+        "Stream limitations and alternatives"
+      ]
+    },
+    {
+      "name": "CompletableFuture & Async Programming",
+      "details": [
+        "Composition methods (thenCompose, thenCombine)",
+        "Exception handling in async chains",
+        "Custom executors with CF",
+        "Performance pitfalls",
+        "Async/await patterns in Java",
+        "Timeout handling and fallback strategies",
+        "Async programming best practices",
+        "Thread safety in async contexts",
+        "Resource management in async operations",
+        "Testing async code effectively"
+      ]
+    },
+    {
+      "name": "Records, Sealed Classes & Pattern Matching",
+      "details": [
+        "Record patterns and deconstruction",
+        "Sealed class hierarchies for domain modeling",
+        "Switch expressions and pattern matching",
+        "Exhaustiveness checking",
+        "Value-based classes and records",
+        "Pattern matching in switch statements",
+        "Sealed interfaces and permits",
+        "Migration patterns from POJOs",
+        "Serialization considerations",
+        "Performance benefits of records"
+      ]
+    },
+    {
+      "name": "Project Loom (Virtual Threads - Java 21)",
+      "details": [
+        "Virtual threads vs Platform threads",
+        "Structured concurrency",
+        "Continuations and thread parking",
+        "When to use virtual threads",
+        "Migration strategies",
+        "Performance implications and benchmarks",
+        "Integration with existing frameworks",
+        "Virtual thread debugging and monitoring",
+        "Blocking operations and scalability",
+        "Structured tasks and scope management"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Why can't you reuse a Stream? How would you design a reusable Stream?",
+    "Implement a parallel stream that processes elements in batches",
+    "Design an async pipeline using CompletableFuture with error handling",
+    "How do virtual threads change the way we design concurrent systems?",
+    "What's the difference between thenCompose and thenCombine in CompletableFuture?",
+    "Explain the performance benefits of records over traditional POJOs",
+    "When would you use sealed classes instead of enums?",
+    "How do you handle exceptions in parallel streams?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.baeldung.com/java-8-new-features",
+      "https://www.oracle.com/news/connect/10-new-features-in-java-17.html",
+      "https://www.infoworld.com/article/3633383/jdk-17-the-new-features-in-java-17.html",
+      "https://www.happycoders.eu/java/java-21-features/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=GETa_t6y4yY",
+      "https://www.youtube.com/watch?v=TwjV1-p8iFE"
+    ],
+    "practice_problems": [
+      "https://www.hackerrank.com/domains/java/java-8",
+      "https://www.codewars.com/kata/search/java?q=java+8"
+    ]
+  }
+}

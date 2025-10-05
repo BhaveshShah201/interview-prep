@@ -1,0 +1,120 @@
+{
+  "title": "Microservices Architecture",
+  "subtopics": [
+    {
+      "name": "Service Design",
+      "details": [
+        "Domain-Driven Design (DDD)",
+        "Bounded contexts",
+        "Service boundaries",
+        "API versioning strategies",
+        "Backward compatibility",
+        "Service contracts and schemas",
+        "Domain events and messaging",
+        "Service granularity principles",
+        "Data ownership and consistency",
+        "Service discovery and communication"
+      ]
+    },
+    {
+      "name": "Communication",
+      "details": [
+        "Synchronous (REST, gRPC, GraphQL)",
+        "Asynchronous (Kafka, RabbitMQ, SQS)",
+        "WebSockets for real-time",
+        "Server-Sent Events (SSE)",
+        "API design best practices",
+        "Message formats and serialization",
+        "Communication patterns and protocols",
+        "API documentation and discovery",
+        "Service mesh communication",
+        "Service-to-service authentication"
+      ]
+    },
+    {
+      "name": "Service Discovery",
+      "details": [
+        "Client-side discovery (Eureka)",
+        "Server-side discovery (Consul, Kubernetes)",
+        "DNS-based discovery",
+        "Health checking mechanisms",
+        "Load balancing strategies",
+        "Service registration patterns",
+        "Discovery cache and TTL",
+        "Service mesh discovery",
+        "Cross-datacenter discovery",
+        "Service mesh vs traditional discovery"
+      ]
+    },
+    {
+      "name": "API Gateway",
+      "details": [
+        "Spring Cloud Gateway",
+        "Kong, Nginx",
+        "Rate limiting",
+        "Request aggregation",
+        "Authentication/Authorization",
+        "Request/response transformation",
+        "API composition patterns",
+        "Gateway performance considerations",
+        "API lifecycle management",
+        "Gateway security patterns"
+      ]
+    },
+    {
+      "name": "Configuration Management",
+      "details": [
+        "Spring Cloud Config",
+        "Consul KV store",
+        "Environment-specific configs",
+        "Secret management (Vault, AWS Secrets Manager)",
+        "Configuration refresh strategies",
+        "Externalized configuration",
+        "Configuration validation",
+        "Dynamic configuration updates",
+        "Configuration security",
+        "Configuration change tracking"
+      ]
+    },
+    {
+      "name": "Observability Stack",
+      "details": [
+        "Logging (ELK stack, Loki)",
+        "Metrics (Prometheus, Grafana)",
+        "Tracing (Jaeger, Zipkin)",
+        "Alerts and SLOs",
+        "Distributed monitoring",
+        "Service mesh observability",
+        "Cost monitoring",
+        "Performance analysis",
+        "Alerting strategies",
+        "Observability pipelines"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a microservices architecture for Netflix-scale streaming",
+    "How do you handle versioning when 100 services depend on your API?",
+    "Design a service mesh for 500 microservices",
+    "How would you migrate from monolith to microservices?",
+    "How do you handle distributed transactions in microservices?",
+    "What are the trade-offs between synchronous and asynchronous communication?",
+    "How do you implement circuit breakers in microservices?",
+    "How do you ensure data consistency across microservices?"
+  ],
+  "resources": {
+    "articles": [
+      "https://microservices.io/",
+      "https://www.martinfowler.com/articles/microservices.html",
+      "https://aws.amazon.com/microservices/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=wgdBVhyXlPA",
+      "https://www.youtube.com/watch?v=1I2-B-g_K2A"
+    ],
+    "practice_problems": [
+      "https://github.com/donnemartin/system-design-primer",
+      "https://www.educative.io/courses/grokking-the-system-design-interview"
+    ]
+  }
+}

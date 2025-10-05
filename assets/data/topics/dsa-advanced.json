@@ -1,0 +1,90 @@
+{
+  "title": "Advanced DSA for Tech Leads",
+  "subtopics": [
+    {
+      "name": "Complex Data Structures",
+      "details": [
+        "Trie (Prefix tree) for autocomplete",
+        "Segment Tree for range queries",
+        "Fenwick Tree (Binary Indexed Tree)",
+        "Disjoint Set (Union-Find)",
+        "Skip List",
+        "Bloom Filter for membership tests",
+        "Count-Min Sketch",
+        "HyperLogLog for cardinality estimation",
+        "Advanced tree variations",
+        "Space-time complexity trade-offs"
+      ]
+    },
+    {
+      "name": "Graph Algorithms",
+      "details": [
+        "Dijkstra's shortest path",
+        "Bellman-Ford algorithm",
+        "Floyd-Warshall",
+        "Topological sort",
+        "Minimum Spanning Tree (Kruskal, Prim)",
+        "Strongly Connected Components",
+        "Network flow algorithms",
+        "Advanced graph traversals",
+        "Graph partitioning",
+        "Graph algorithms optimization"
+      ]
+    },
+    {
+      "name": "Advanced Tree Problems",
+      "details": [
+        "Segment trees",
+        "Binary lifting",
+        "LCA (Lowest Common Ancestor)",
+        "Tree DP problems",
+        "Advanced tree traversals",
+        "Tree serialization",
+        "Balanced tree implementations",
+        "Tree algorithms complexity",
+        "Tree decomposition",
+        "Advanced tree queries"
+      ]
+    },
+    {
+      "name": "String Algorithms",
+      "details": [
+        "KMP pattern matching",
+        "Rabin-Karp algorithm",
+        "Z-algorithm",
+        "Suffix arrays",
+        "Aho-Corasick automaton",
+        "String processing techniques",
+        "Palindrome algorithms",
+        "String matching optimizations",
+        "Trie applications in strings",
+        "Compression algorithms"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design and implement a thread-safe LRU cache",
+    "Find the median in a data stream",
+    "Design a time-based key-value store",
+    "Implement a distributed hash table",
+    "Design a consistent hashing ring",
+    "Implement a bloom filter",
+    "How would you find the shortest path in a weighted graph?",
+    "Design an algorithm for pattern matching in large text files"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.geeksforgeeks.org/advanced-data-structures/",
+      "https://cp-algorithms.com/",
+      "https://www.topcoder.com/thrive/tracks/Data%20Science/Data%20Structures%20and%20Algorithms"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=2_aWzGqabnQ",
+      "https://www.youtube.com/watch?v=R_M3uPq68iI"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/problemset/all/?difficulty=Hard",
+      "https://www.topcoder.com/challenges"
+    ]
+  }
+}

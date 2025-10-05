@@ -1,0 +1,105 @@
+{
+  "title": "Advanced SQL & Database Design",
+  "subtopics": [
+    {
+      "name": "Query Optimization",
+      "details": [
+        "Execution plans analysis",
+        "Index types (B-tree, Hash, Bitmap, Full-text)",
+        "Composite indexes strategy",
+        "Covering indexes",
+        "Index-only scans",
+        "Query rewriting techniques",
+        "Query execution statistics",
+        "Optimizer hints and directives",
+        "Cost-based vs rule-based optimization",
+        "Database statistics and cardinality"
+      ]
+    },
+    {
+      "name": "Advanced SQL",
+      "details": [
+        "Window functions (ROW_NUMBER, RANK, LAG, LEAD)",
+        "CTEs (Common Table Expressions)",
+        "Recursive queries",
+        "Pivot and unpivot",
+        "JSON functions",
+        "Complex aggregations",
+        "Analytical functions",
+        "Advanced joins and set operations",
+        "SQL performance patterns",
+        "Recursive CTEs for hierarchies"
+      ]
+    },
+    {
+      "name": "Transaction Management",
+      "details": [
+        "ACID properties",
+        "Isolation levels (Read Uncommitted → Serializable)",
+        "Phantom reads, dirty reads, non-repeatable reads",
+        "Optimistic vs Pessimistic locking",
+        "MVCC (Multi-Version Concurrency Control)",
+        "Transaction boundaries",
+        "Deadlock detection and prevention",
+        "Distributed transaction coordination",
+        "Isolation level trade-offs",
+        "Long-running transaction management"
+      ]
+    },
+    {
+      "name": "Database Scaling",
+      "details": [
+        "Vertical vs Horizontal scaling",
+        "Read replicas",
+        "Sharding strategies (Range, Hash, Geographic)",
+        "Partitioning (Range, List, Hash)",
+        "Database connection pooling",
+        "Federated databases",
+        "Database sharding challenges",
+        "Cross-shard queries",
+        "Shard rebalancing strategies",
+        "Consistent hashing"
+      ]
+    },
+    {
+      "name": "NoSQL Patterns",
+      "details": [
+        "Document stores (MongoDB)",
+        "Key-value stores (Redis, DynamoDB)",
+        "Column-family (Cassandra)",
+        "Graph databases (Neo4j)",
+        "CAP theorem trade-offs",
+        "Eventual vs strong consistency",
+        "NoSQL schema design",
+        "Query patterns in NoSQL",
+        "NoSQL vs SQL trade-offs",
+        "Polyglot persistence"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a database schema for Instagram with 1 billion users",
+    "How would you shard a multi-tenant SaaS database?",
+    "Optimize this slow query (complex join scenario)",
+    "Design a real-time leaderboard system",
+    "How do you handle database migrations with zero downtime?",
+    "Explain the trade-offs between different isolation levels",
+    "How do you implement optimistic locking?",
+    "Design a system for handling 100K writes/sec to a database"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.w3schools.com/sql/sql_advanced.asp",
+      "https://www.geeksforgeeks.org/advanced-sql/",
+      "https://www.datacamp.com/community/tutorials/sql-tutorial-for-data-analysis"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=wUP_1_s76_w",
+      "https://www.youtube.com/watch?v=2e2p5yhmEOg"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/problemset/database/",
+      "https://www.hackerrank.com/domains/sql"
+    ]
+  }
+}

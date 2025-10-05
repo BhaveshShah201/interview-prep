@@ -1,0 +1,1280 @@
+{
+  "system_design_scenarios": [
+    {
+      "id": 1,
+      "title": "Design WhatsApp/Messenger",
+      "category": "Social Media & Communication",
+      "description": "Design a messaging platform with real-time communication, file sharing, and end-to-end encryption.",
+      "requirements": [
+        "Support 1 billion+ users",
+        "Real-time message delivery",
+        "End-to-end encryption",
+        "File sharing (photos, videos, documents)",
+        "Group chats with up to 256 participants",
+        "Message delivery receipts",
+        "Typing indicators",
+        "Online status",
+        "Voice and video calls"
+      ],
+      "considerations": [
+        "Message ordering and reliability",
+        "Handling offline users",
+        "Storage for media files",
+        "Privacy and security",
+        "Global distribution",
+        "High availability and fault tolerance"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Design Instagram Feed",
+      "category": "Social Media & Communication",
+      "description": "Design a social media feed system with billions of users, real-time updates, and personalization.",
+      "requirements": [
+        "200 million+ daily active users",
+        "Personalized news feeds",
+        "Real-time updates",
+        "Support for photos and videos",
+        "Hashtag discovery",
+        "Trending content",
+        "Geotagged posts",
+        "Stories feature"
+      ],
+      "considerations": [
+        "Feed generation algorithms",
+        "Handling viral content",
+        "Personalization and recommendation",
+        "Storage for media files",
+        "Global distribution",
+        "Real-time notifications"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Design Twitter Timeline",
+      "category": "Social Media & Communication",
+      "description": "Design a timeline service that handles millions of tweets per second with personalized feeds.",
+      "requirements": [
+        "300+ million daily active users",
+        "Personalized timelines",
+        "Real-time tweet delivery",
+        "Trending topics",
+        "Hashtag tracking",
+        "Retweets and likes",
+        "Direct messages",
+        "Media sharing"
+      ],
+      "considerations": [
+        "Handling massive write loads",
+        "Feed generation algorithms",
+        "Viral content management",
+        "Trending algorithm",
+        "Global distribution",
+        "Rate limiting and spam prevention"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Design TikTok Video Recommendation",
+      "category": "Social Media & Communication",
+      "description": "Design a video recommendation system that serves personalized feeds to billions of users.",
+      "requirements": [
+        "Personalized video feed for each user",
+        "Video upload and transcoding",
+        "Like, comment, and share features",
+        "Follow and recommendation algorithms",
+        "Video analytics and insights",
+        "Content moderation",
+        "Live streaming support"
+      ],
+      "considerations": [
+        "Content-based and collaborative filtering",
+        "Video processing and compression",
+        "Real-time recommendation engine",
+        "Content discovery algorithms",
+        "User engagement optimization",
+        "Video storage and CDN"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Design LinkedIn Connection System",
+      "category": "Social Media & Communication",
+      "description": "Design a professional network with connection requests, recommendations, and job matching.",
+      "requirements": [
+        "Connection request system",
+        "People you may know",
+        "Job recommendations",
+        "News feed for professionals",
+        "Company pages",
+        "Endorsements and skills",
+        "Messaging for professionals"
+      ],
+      "considerations": [
+        "Graph database for connections",
+        "Recommendation algorithms",
+        "Privacy settings management",
+        "Graph traversal efficiency",
+        "Professional networking features",
+        "Job matching algorithms"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Design Slack Messaging Platform",
+      "category": "Social Media & Communication",
+      "description": "Design a team communication platform with channels, direct messaging, and integrations.",
+      "requirements": [
+        "Real-time messaging",
+        "Channels and direct messages",
+        "File sharing and storage",
+        "Third-party integrations",
+        "Search functionality",
+        "User presence indicators",
+        "Mobile and desktop applications"
+      ],
+      "considerations": [
+        "Real-time message synchronization",
+        "Message threading",
+        "Integration architecture",
+        "Performance at scale",
+        "Security and access control",
+        "Offline message delivery"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Design Discord Voice/Video Chat",
+      "category": "Social Media & Communication",
+      "description": "Design a gaming communication platform with voice, video, and text channels.",
+      "requirements": [
+        "Real-time voice and video streaming",
+        "Text and voice channels",
+        "Low-latency communication",
+        "Server and role management",
+        "Screen sharing",
+        "Bot integration system",
+        "User streaming capabilities"
+      ],
+      "considerations": [
+        "Real-time media streaming",
+        "Quality of service management",
+        "Voice optimization algorithms",
+        "Server scalability",
+        "Real-time communication protocols",
+        "Connection stability"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Design Amazon Product Catalog",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a product catalog for the world's largest online retailer with inventory management.",
+      "requirements": [
+        "Billions of products",
+        "Real-time inventory updates",
+        "Product search and filtering",
+        "Price management",
+        "Product recommendations",
+        "Customer reviews and ratings",
+        "Image and video hosting",
+        "Vendor management"
+      ],
+      "considerations": [
+        "Handling massive catalog size",
+        "Real-time inventory consistency",
+        "Global product availability",
+        "Search and discovery",
+        "Pricing strategies",
+        "Vendor onboarding and management"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Design Uber/Lyft Ride Matching",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a ride-hailing platform with real-time matching, geolocation, and surge pricing.",
+      "requirements": [
+        "Millions of rides daily",
+        "Real-time ride matching",
+        "Geolocation tracking",
+        "Surge pricing model",
+        "Driver and rider safety",
+        "Payment processing",
+        "Route optimization",
+        "Ratings and reviews"
+      ],
+      "considerations": [
+        "Real-time geolocation matching",
+        "Dynamic pricing algorithms",
+        "Payment security",
+        "Safety and regulatory compliance",
+        "Global coverage and localization",
+        "Peak demand handling"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Design Airbnb Booking System",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a platform for booking unique accommodations worldwide.",
+      "requirements": [
+        "Property search and filtering",
+        "Real-time availability checking",
+        "Booking management",
+        "Payment processing",
+        "Review and rating system",
+        "Host and guest messaging",
+        "Calendar synchronization"
+      ],
+      "considerations": [
+        "Availability and pricing constraints",
+        "Trust and safety mechanisms",
+        "Global payment processing",
+        "Calendar conflict resolution",
+        "Local market considerations",
+        "Cancellation policies"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Design Food Delivery (DoorDash/Uber Eats)",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a food delivery platform connecting restaurants, customers, and delivery drivers.",
+      "requirements": [
+        "Restaurant discovery and menus",
+        "Real-time order tracking",
+        "Delivery driver assignment",
+        "Payment and tipping",
+        "Order history and management",
+        "Promotions and discounts",
+        "Restaurant management tools"
+      ],
+      "considerations": [
+        "Real-time location tracking",
+        "Order assignment algorithms",
+        "Delivery time estimates",
+        "Restaurant availability",
+        "Driver routing optimization",
+        "Dynamic pricing"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Design Dynamic Pricing System",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a system that dynamically adjusts prices based on demand, inventory, and competition.",
+      "requirements": [
+        "Real-time price calculation",
+        "Demand forecasting",
+        "Competitor price monitoring",
+        "Inventory-based pricing",
+        "Promotional pricing",
+        "Price optimization algorithms",
+        "Price change notifications"
+      ],
+      "considerations": [
+        "Machine learning models",
+        "Real-time data processing",
+        "Price volatility management",
+        "Market positioning",
+        "Revenue optimization",
+        "Price fairness considerations"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Design Inventory Management",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a system to manage inventory across multiple warehouses and sales channels.",
+      "requirements": [
+        "Real-time inventory tracking",
+        "Multi-location inventory",
+        "Automatic reordering",
+        "Supply chain visibility",
+        "Demand forecasting",
+        "Allocation and reservation",
+        "Inventory reporting"
+      ],
+      "considerations": [
+        "Consistency across locations",
+        "Integration with marketplaces",
+        "Low inventory alerts",
+        "Batch and expiry tracking",
+        "Demand planning",
+        "Supply chain optimization"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Design Payment Gateway",
+      "category": "E-commerce & Marketplace",
+      "description": "Design a secure payment processing system supporting multiple payment methods.",
+      "requirements": [
+        "Multiple payment methods support",
+        "PCI DSS compliance",
+        "Payment authorization and capture",
+        "Subscription billing",
+        "Fraud detection",
+        "Multi-currency support",
+        "Payment reporting"
+      ],
+      "considerations": [
+        "Security and encryption",
+        "Transaction processing speed",
+        "Payment gateway integrations",
+        "Compliance requirements",
+        "Failure handling and retries",
+        "Payment routing optimization"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Design Netflix Streaming",
+      "category": "Streaming & Media",
+      "description": "Design a video streaming platform with content delivery, personalization, and offline capabilities.",
+      "requirements": [
+        "200+ million subscribers",
+        "Video streaming to 190+ countries",
+        "Content recommendation",
+        "Offline downloads",
+        "Multiple device support",
+        "4K/HD streaming",
+        "Subtitles and audio tracks",
+        "Content licensing management"
+      ],
+      "considerations": [
+        "Content delivery network (CDN)",
+        "Video encoding and transcoding",
+        "Personalization algorithms",
+        "Offline synchronization",
+        "Licensing restrictions",
+        "Global content distribution"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Design YouTube Video Platform",
+      "category": "Streaming & Media",
+      "description": "Design a video sharing platform with upload, transcoding, and recommendation systems.",
+      "requirements": [
+        "Video upload and transcoding",
+        "Video search and discovery",
+        "Recommendation engine",
+        "Comment and like system",
+        "Channel management",
+        "Ad insertion and monetization",
+        "Live streaming support"
+      ],
+      "considerations": [
+        "Video processing and storage",
+        "Content moderation",
+        "Adaptive streaming",
+        "Copyright detection",
+        "Scalable recommendation algorithms",
+        "Video analytics"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Design Spotify Recommendation",
+      "category": "Streaming & Media",
+      "description": "Design a music streaming platform with personalized recommendations and social features.",
+      "requirements": [
+        "Music streaming and caching",
+        "Personalized recommendations",
+        "Playlist creation and sharing",
+        "Artist and album discovery",
+        "Offline playback",
+        "Social features",
+        "Podcast integration"
+      ],
+      "considerations": [
+        "Audio streaming protocols",
+        "Music recommendation algorithms",
+        "Content licensing",
+        "Offline synchronization",
+        "Audio quality optimization",
+        "Social music discovery"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Design Live Streaming (Twitch)",
+      "category": "Streaming & Media",
+      "description": "Design a live streaming platform for gamers with real-time interaction.",
+      "requirements": [
+        "Real-time video streaming",
+        "Low-latency broadcasting",
+        "Live chat integration",
+        "Viewer subscriptions",
+        "Stream recording and VOD",
+        "Monetization features",
+        "Moderation tools"
+      ],
+      "considerations": [
+        "Real-time video processing",
+        "CDN and edge caching",
+        "Interactive features",
+        "Scalable broadcasting",
+        "Content moderation",
+        "Latency optimization"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Design Video Transcoding Pipeline",
+      "category": "Streaming & Media",
+      "description": "Design a system to convert uploaded videos into multiple formats and resolutions.",
+      "requirements": [
+        "Multiple output formats",
+        "Different quality levels",
+        "Thumbnail generation",
+        "Metadata extraction",
+        "Job queue management",
+        "Progress tracking",
+        "Error handling"
+      ],
+      "considerations": [
+        "Distributed transcoding",
+        "Resource allocation",
+        "Format compatibility",
+        "Quality optimization",
+        "Cost optimization",
+        "Fault tolerance"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Design CDN for Media Delivery",
+      "category": "Streaming & Media",
+      "description": "Design a content delivery network optimized for media content.",
+      "requirements": [
+        "Global edge locations",
+        "Caching strategies",
+        "Load balancing",
+        "SSL/TLS termination",
+        "Traffic routing",
+        "Performance monitoring",
+        "Security features"
+      ],
+      "considerations": [
+        "Cache invalidation",
+        "Origin shielding",
+        "Intelligent routing",
+        "Bandwidth optimization",
+        "DDoS protection",
+        "Cost efficiency"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Design Google Search",
+      "category": "Search & Discovery",
+      "description": "Design a web search engine with indexing, ranking, and query processing at global scale.",
+      "requirements": [
+        "Index entire web (billions of pages)",
+        "Query processing in milliseconds",
+        "Relevant result ranking",
+        "Image and video search",
+        "News and local search",
+        "Autocomplete suggestions",
+        "Spell correction",
+        "Personalized results"
+      ],
+      "considerations": [
+        "Web crawling and indexing",
+        "PageRank algorithm",
+        "Query processing optimization",
+        "Search result relevance",
+        "Global infrastructure",
+        "Real-time index updates"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Design Autocomplete/Typeahead",
+      "category": "Search & Discovery",
+      "description": "Design a system that provides search suggestions in real-time as users type.",
+      "requirements": [
+        "Response time < 100ms",
+        "Handle millions of queries",
+        "Personalized suggestions",
+        "Trending search terms",
+        "Spelling correction",
+        "Predictive text",
+        "Geographic relevance"
+      ],
+      "considerations": [
+        "Trie data structure",
+        "Caching popular queries",
+        "Query preprocessing",
+        "Autoscaling for load",
+        "Personalization algorithms",
+        "Data freshness"
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Design Web Crawler",
+      "category": "Search & Discovery",
+      "description": "Design a system to crawl and index web pages for a search engine.",
+      "requirements": [
+        "Millions of URLs to crawl",
+        "Respect robots.txt",
+        "Avoid duplicate content",
+        "Distributed crawling",
+        "Content extraction",
+        "Politeness policies",
+        "Crawl scheduling"
+      ],
+      "considerations": [
+        "URL frontier management",
+        "Crawling prioritization",
+        "Content processing",
+        "Storage solutions",
+        "Crawl rate optimization",
+        "Handling dynamic content"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Design Recommendation System",
+      "category": "Search & Discovery",
+      "description": "Design a recommendation engine for e-commerce or content discovery.",
+      "requirements": [
+        "Personalized recommendations",
+        "Real-time updates",
+        "Multiple recommendation algorithms",
+        "A/B testing framework",
+        "User behavior tracking",
+        "Cold start problem solution",
+        "Diversity and serendipity"
+      ],
+      "considerations": [
+        "Collaborative filtering",
+        "Content-based filtering",
+        "Hybrid approaches",
+        "Real-time scoring",
+        "Model training pipelines",
+        "Evaluation metrics"
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Design Personalized News Feed",
+      "category": "Search & Discovery",
+      "description": "Design a system to curate personalized news feeds for users.",
+      "requirements": [
+        "Source aggregation",
+        "Personalization",
+        "Real-time updates",
+        "Content categorization",
+        "User engagement tracking",
+        "Fact-checking integration",
+        "Topic preferences"
+      ],
+      "considerations": [
+        "Content relevance",
+        "Information diversity",
+        "Filter bubble prevention",
+        "Content quality assessment",
+        "Real-time scoring",
+        "Privacy considerations"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Design URL Shortener (bit.ly)",
+      "category": "Infrastructure & Tools",
+      "description": "Design a service that creates short aliases for long URLs with high availability and scalability.",
+      "requirements": [
+        "High availability and low latency",
+        "Millions of new URLs daily",
+        "Custom short URLs",
+        "Click tracking and analytics",
+        "Duplicate URL detection",
+        "Expiration and maintenance",
+        "Security against abuse",
+        "API for bulk operations"
+      ],
+      "considerations": [
+        "ID generation algorithms",
+        "Distributed storage",
+        "Caching for high read performance",
+        "Security measures",
+        "Analytics and monitoring",
+        "Data retention policies"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Design Rate Limiter",
+      "category": "Infrastructure & Tools",
+      "description": "Design a system to limit the rate of requests for APIs or services.",
+      "requirements": [
+        "Configurable rate limits",
+        "Multiple limiting strategies",
+        "Distributed rate limiting",
+        "Real-time monitoring",
+        "Burst handling",
+        "Fair usage policies",
+        "Multi-tenant support"
+      ],
+      "considerations": [
+        "Token bucket algorithm",
+        "Leaky bucket algorithm",
+        "Sliding window counters",
+        "Distributed consensus",
+        "Performance optimization",
+        "Global rate limiting"
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Design Distributed Cache",
+      "category": "Infrastructure & Tools",
+      "description": "Design a distributed caching system for high-performance applications.",
+      "requirements": [
+        "High availability",
+        "Horizontal scalability",
+        "Consistency models",
+        "Eviction policies",
+        "Data partitioning",
+        "Replication strategies",
+        "Cache warming"
+      ],
+      "considerations": [
+        "Cache coherence",
+        "Partitioning strategies",
+        "Consistency vs performance",
+        "Failure handling",
+        "Memory management",
+        "Cache invalidation"
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Design Notification System",
+      "category": "Infrastructure & Tools",
+      "description": "Design a system to send millions of notifications across multiple channels (SMS, email, push).",
+      "requirements": [
+        "Millions of notifications per day",
+        "Multi-channel delivery (SMS, email, push)",
+        "Delivery status tracking",
+        "Personalization",
+        "Scheduling and batching",
+        "Rate limiting",
+        "Failure handling and retry",
+        "User preferences management"
+      ],
+      "considerations": [
+        "Message queuing and delivery",
+        "Channel-specific delivery mechanisms",
+        "Rate limiting and throttling",
+        "Delivery failure handling",
+        "Personalization and templating",
+        "Monitoring and analytics"
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Design Job Scheduler",
+      "category": "Infrastructure & Tools",
+      "description": "Design a system for scheduling and executing background jobs.",
+      "requirements": [
+        "Cron-like scheduling",
+        "One-time and recurring jobs",
+        "Job dependency management",
+        "Failure handling",
+        "Job prioritization",
+        "Distributed execution",
+        "Monitoring and alerting"
+      ],
+      "considerations": [
+        "Distributed consensus",
+        "Job queue management",
+        "Failure recovery",
+        "Scalability",
+        "Persistence mechanisms",
+        "Load balancing"
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Design Distributed Task Queue",
+      "category": "Infrastructure & Tools",
+      "description": "Design a system for distributing and processing tasks across multiple workers.",
+      "requirements": [
+        "Task distribution",
+        "Worker assignment",
+        "Priority queues",
+        "Retry mechanisms",
+        "Dead letter queues",
+        "Monitoring and metrics",
+        "Horizontal scaling"
+      ],
+      "considerations": [
+        "Message broker selection",
+        "Task serialization",
+        "Worker health checks",
+        "Load balancing",
+        "Fault tolerance",
+        "Performance optimization"
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Design API Gateway",
+      "category": "Infrastructure & Tools",
+      "description": "Design a system that manages API requests, authentication, and routing.",
+      "requirements": [
+        "Request routing",
+        "Authentication and authorization",
+        "Rate limiting",
+        "Request/response transformation",
+        "Monitoring and logging",
+        "API versioning",
+        "Circuit breaking"
+      ],
+      "considerations": [
+        "Performance optimization",
+        "Security measures",
+        "Service discovery integration",
+        "Load balancing",
+        "Caching strategies",
+        "Centralized logging"
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Design Service Mesh",
+      "category": "Infrastructure & Tools",
+      "description": "Design a dedicated infrastructure layer to handle service-to-service communication.",
+      "requirements": [
+        "Service discovery",
+        "Load balancing",
+        "Traffic management",
+        "Security policies",
+        "Observability",
+        "Circuit breaking",
+        "Service-to-service authentication"
+      ],
+      "considerations": [
+        "Sidecar architecture",
+        "Proxy performance",
+        "Configuration management",
+        "Security and encryption",
+        "Monitoring integration",
+        "Policy enforcement"
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Design Real-time Analytics Dashboard",
+      "category": "Analytics & Monitoring",
+      "description": "Design a system for real-time metrics collection, processing, and visualization.",
+      "requirements": [
+        "Millions of metrics per second",
+        "Real-time aggregation",
+        "Dashboard visualization",
+        "Alerting and monitoring",
+        "Historical data storage",
+        "Multi-tenant architecture",
+        "Data retention policies",
+        "API for data ingestion"
+      ],
+      "considerations": [
+        "Time-series database selection",
+        "Real-time stream processing",
+        "Data partitioning and sharding",
+        "Dashboard rendering performance",
+        "Data compression and storage",
+        "Security and access control"
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Design Logging System (ELK alternative)",
+      "category": "Analytics & Monitoring",
+      "description": "Design a distributed logging system for collecting and analyzing logs.",
+      "requirements": [
+        "Log ingestion at scale",
+        "Real-time processing",
+        "Search and analysis",
+        "Log retention policies",
+        "Multi-tenant support",
+        "Alerting on errors",
+        "Log compression"
+      ],
+      "considerations": [
+        "Log format standardization",
+        "Ingestion pipeline",
+        "Storage strategies",
+        "Query performance",
+        "Security and privacy",
+        "Data lifecycle management"
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Design Metrics Aggregation System",
+      "category": "Analytics & Monitoring",
+      "description": "Design a system for collecting, aggregating, and storing application metrics.",
+      "requirements": [
+        "High-frequency metric collection",
+        "Aggregation and rollups",
+        "Multi-dimensional queries",
+        "Alerting rules",
+        "Visualization dashboard",
+        "Data retention policies",
+        "API for metrics"
+      ],
+      "considerations": [
+        "Time-series database",
+        "Efficient storage",
+        "Query optimization",
+        "Rollup strategies",
+        "High availability",
+        "Data compression"
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Design A/B Testing Platform",
+      "category": "Analytics & Monitoring",
+      "description": "Design a system to run A/B tests and analyze results.",
+      "requirements": [
+        "Experiment management",
+        "Traffic splitting",
+        "Metric tracking",
+        "Statistical analysis",
+        "Result visualization",
+        "Feature flag management",
+        "User segmentation"
+      ],
+      "considerations": [
+        "Statistical validity",
+        "Traffic allocation",
+        "Data pipeline",
+        "Result interpretation",
+        "Sample size calculation",
+        "Integration with services"
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Design Fraud Detection System",
+      "category": "Analytics & Monitoring",
+      "description": "Design a real-time fraud detection system for financial transactions.",
+      "requirements": [
+        "Real-time transaction analysis",
+        "Risk scoring",
+        "Pattern recognition",
+        "Alerting and blocking",
+        "Machine learning models",
+        "Feedback loop",
+        "Compliance reporting"
+      ],
+      "considerations": [
+        "Low latency processing",
+        "Model accuracy vs speed",
+        "False positive management",
+        "Privacy compliance",
+        "Model retraining",
+        "Scalability"
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Design Google Docs Collaborative Editing",
+      "category": "Collaboration & Productivity",
+      "description": "Design a system for real-time collaborative document editing.",
+      "requirements": [
+        "Real-time synchronization",
+        "Conflict resolution",
+        "User presence indicators",
+        "Cursor tracking",
+        "Offline editing support",
+        "Version history",
+        "Permission management"
+      ],
+      "considerations": [
+        "Operational transformation",
+        "Conflict detection and resolution",
+        "Real-time communication",
+        "User experience optimization",
+        "Data consistency",
+        "Scalability"
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Design Dropbox File Storage",
+      "category": "Collaboration & Productivity",
+      "description": "Design a cloud-based file storage and synchronization service.",
+      "requirements": [
+        "File upload and download",
+        "Real-time synchronization",
+        "Version control",
+        "Sharing and collaboration",
+        "File locking",
+        "Bandwidth optimization",
+        "Security and encryption"
+      ],
+      "considerations": [
+        "Deduplication",
+        "Delta sync",
+        "Storage optimization",
+        "Cross-device sync",
+        "Conflict resolution",
+        "Privacy controls"
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Design Calendar Scheduling System",
+      "category": "Collaboration & Productivity",
+      "description": "Design a calendar system with scheduling and availability management.",
+      "requirements": [
+        "Event creation and management",
+        "Availability checking",
+        "Reminders and notifications",
+        "Sharing and permissions",
+        "Scheduling assistant",
+        "Multiple calendar views",
+        "Time zone management"
+      ],
+      "considerations": [
+        "Conflict detection",
+        "Availability algorithms",
+        "Recurrence patterns",
+        "Integration with email",
+        "Privacy controls",
+        "Performance optimization"
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Design Ticketing System (JIRA)",
+      "category": "Collaboration & Productivity",
+      "description": "Design a project management and issue tracking system.",
+      "requirements": [
+        "Issue creation and assignment",
+        "Workflow management",
+        "Reporting and dashboards",
+        "Team collaboration",
+        "Time tracking",
+        "Customization options",
+        "Integration capabilities"
+      ],
+      "considerations": [
+        "Workflow flexibility",
+        "Custom field management",
+        "Performance with large datasets",
+        "Permission system",
+        "Data visualization",
+        "Extensibility"
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Design Code Repository (GitHub)",
+      "category": "Collaboration & Productivity",
+      "description": "Design a Git-based code hosting and collaboration platform.",
+      "requirements": [
+        "Git repository hosting",
+        "Pull request system",
+        "Code review tools",
+        "Issue tracking",
+        "CI/CD integration",
+        "Access control",
+        "Collaboration features"
+      ],
+      "considerations": [
+        "Git protocol handling",
+        "Code storage optimization",
+        "Diff and merge algorithms",
+        "Security scanning",
+        "Performance optimization",
+        "Integration ecosystems"
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Design Stock Trading Platform",
+      "category": "Financial Systems",
+      "description": "Design a high-frequency trading platform with real-time market data.",
+      "requirements": [
+        "Low-latency trading",
+        "Real-time market data",
+        "Order management",
+        "Risk management",
+        "Portfolio tracking",
+        "Regulatory compliance",
+        "Audit trails"
+      ],
+      "considerations": [
+        "Ultra-low latency",
+        "Market data feeds",
+        "Order execution speed",
+        "Risk controls",
+        "Regulatory requirements",
+        "Scalability"
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Design Wallet System",
+      "category": "Financial Systems",
+      "description": "Design a digital wallet system for payments and transactions.",
+      "requirements": [
+        "Money storage and transfers",
+        "Payment processing",
+        "Transaction history",
+        "Security and fraud prevention",
+        "Multi-currency support",
+        "QR code payments",
+        "Bill payments"
+      ],
+      "considerations": [
+        "Transaction integrity",
+        "Security protocols",
+        "Compliance requirements",
+        "Performance",
+        "User verification",
+        "Reconciliation"
+      ]
+    },
+    {
+      "id": 46,
+      "title": "Design Ledger for Cryptocurrency",
+      "category": "Financial Systems",
+      "description": "Design a blockchain-based ledger system for cryptocurrency transactions.",
+      "requirements": [
+        "Distributed ledger",
+        "Transaction validation",
+        "Consensus mechanism",
+        "Block creation",
+        "Wallet management",
+        "Peer-to-peer network",
+        "Smart contracts"
+      ],
+      "considerations": [
+        "Consensus security",
+        "Network scalability",
+        "Transaction throughput",
+        "Block size optimization",
+        "Energy efficiency",
+        "Decentralization"
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Design High-Frequency Trading System",
+      "category": "Financial Systems",
+      "description": "Design a system optimized for trading millions of orders per second.",
+      "requirements": [
+        "Microsecond latency",
+        "Order matching engine",
+        "Market data feeds",
+        "Risk controls",
+        "Real-time analytics",
+        "Regulatory reporting",
+        "Failover mechanisms"
+      ],
+      "considerations": [
+        "Hardware optimization",
+        "Network co-location",
+        "Memory management",
+        "Algorithm optimization",
+        "Risk management",
+        "Compliance monitoring"
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Design Multiplayer Game Backend",
+      "category": "Gaming & Real-time",
+      "description": "Design a backend system for real-time multiplayer games.",
+      "requirements": [
+        "Real-time game state sync",
+        "Player matchmaking",
+        "Room management",
+        "Anti-cheat mechanisms",
+        "Progress synchronization",
+        "Leaderboards",
+        "Real-time communication"
+      ],
+      "considerations": [
+        "Low latency requirements",
+        "Game state management",
+        "Scalability",
+        "Security",
+        "Player experience",
+        "Cross-platform support"
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Design Leaderboard System",
+      "category": "Gaming & Real-time",
+      "description": "Design a system for tracking and ranking player scores.",
+      "requirements": [
+        "Real-time score updates",
+        "Global rankings",
+        "Multiple ranking criteria",
+        "Historical data",
+        "Social features",
+        "Seasonal leaderboards",
+        "Anti-cheat verification"
+      ],
+      "considerations": [
+        "Performance optimization",
+        "Data partitioning",
+        "Caching strategies",
+        "Consistency requirements",
+        "Scalability",
+        "Query optimization"
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Design Real-time Bidding System",
+      "category": "Gaming & Real-time",
+      "description": "Design an ad exchange for real-time bidding on ad impressions.",
+      "requirements": [
+        "Millisecond decision making",
+        "Bid evaluation",
+        "Ad serving",
+        "Real-time analytics",
+        "Budget management",
+        "Fraud detection",
+        "Auction mechanisms"
+      ],
+      "considerations": [
+        "Ultra-low latency",
+        "Auction algorithms",
+        "Bid optimization",
+        "Performance metrics",
+        "Fraud prevention",
+        "Revenue optimization"
+      ]
+    },
+    {
+      "id": 51,
+      "title": "Design Parking Lot System",
+      "category": "Specialized Systems",
+      "description": "Design a system to manage parking spaces in a multi-level parking facility.",
+      "requirements": [
+        "Space availability tracking",
+        "Entry/exit management",
+        "Payment processing",
+        "Reservation system",
+        "Security monitoring",
+        "Analytics and reporting",
+        "Mobile app integration"
+      ],
+      "considerations": [
+        "Real-time space tracking",
+        "Scalability",
+        "Integration with sensors",
+        "Payment security",
+        "User experience",
+        "Maintenance requirements"
+      ]
+    },
+    {
+      "id": 52,
+      "title": "Design Hotel Booking System",
+      "category": "Specialized Systems",
+      "description": "Design an online hotel reservation system with availability management.",
+      "requirements": [
+        "Room availability tracking",
+        "Booking management",
+        "Pricing and promotions",
+        "Payment processing",
+        "Review management",
+        "Cancellation policies",
+        "Multi-location support"
+      ],
+      "considerations": [
+        "Inventory management",
+        "Pricing algorithms",
+        "Search and filtering",
+        "Overbooking prevention",
+        "Integration with hotels",
+        "Customer support"
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Design Library Management System",
+      "category": "Specialized Systems",
+      "description": "Design a system to manage books, members, and borrowing in a library.",
+      "requirements": [
+        "Book catalog management",
+        "Member registration",
+        "Borrowing and returning",
+        "Reservation system",
+        "Late fee calculation",
+        "Search and discovery",
+        "Reporting and analytics"
+      ],
+      "considerations": [
+        "Data integrity",
+        "User experience",
+        "Integration with databases",
+        "Scalability",
+        "Reporting capabilities",
+        "Reservation algorithms"
+      ]
+    },
+    {
+      "id": 54,
+      "title": "Design LRU Cache (System-level)",
+      "category": "Specialized Systems",
+      "description": "Design an in-memory LRU cache with O(1) time complexity.",
+      "requirements": [
+        "O(1) get and put operations",
+        "Eviction policy implementation",
+        "Thread safety",
+        "Memory efficiency",
+        "Configurable size",
+        "Performance metrics",
+        "Cache warming"
+      ],
+      "considerations": [
+        "Data structure selection",
+        "Concurrency handling",
+        "Memory management",
+        "Performance optimization",
+        "Eviction strategy",
+        "Monitoring capabilities"
+      ]
+    },
+    {
+      "id": 55,
+      "title": "Design Distributed Lock Manager",
+      "category": "Specialized Systems",
+      "description": "Design a system to provide distributed locking across multiple services.",
+      "requirements": [
+        "Lock acquisition and release",
+        "TTL for locks",
+        "Lock reentrancy",
+        "Distributed consistency",
+        "Failure handling",
+        "Performance monitoring",
+        "Fairness guarantees"
+      ],
+      "considerations": [
+        "Consensus algorithms",
+        "Failure detection",
+        "Performance optimization",
+        "Consistency models",
+        "Scalability",
+        "Safety and liveness"
+      ]
+    }
+  ]
+}

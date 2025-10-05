@@ -1,0 +1,90 @@
+{
+  "title": "Scalability & High Availability",
+  "subtopics": [
+    {
+      "name": "Load Balancing",
+      "details": [
+        "L4 (Transport) vs L7 (Application) load balancers",
+        "Load balancing algorithms (Round-robin, Least connections, IP hash)",
+        "Health checks and circuit breaking",
+        "Session persistence strategies",
+        "Global load balancing",
+        "Load balancer failure scenarios",
+        "Dynamic load balancing",
+        "Content-aware routing",
+        "Load balancer configuration",
+        "Load balancing at different layers"
+      ]
+    },
+    {
+      "name": "Caching Strategies",
+      "details": [
+        "Cache-aside (Lazy loading)",
+        "Write-through",
+        "Write-behind (Write-back)",
+        "Refresh-ahead",
+        "Cache invalidation strategies",
+        "CDN for static content",
+        "Distributed caching (Redis cluster)",
+        "Cache warming strategies",
+        "Cache consistency patterns",
+        "Multi-tier caching"
+      ]
+    },
+    {
+      "name": "Horizontal Scaling",
+      "details": [
+        "Stateless service design",
+        "Session management (Redis, Hazelcast)",
+        "Database sharding",
+        "Consistent hashing",
+        "Service discovery and scaling",
+        "Auto-scaling policies",
+        "Container orchestration",
+        "Scaling metrics and thresholds",
+        "Scaling patterns",
+        "Elastic scaling strategies"
+      ]
+    },
+    {
+      "name": "Reliability Patterns",
+      "details": [
+        "Multi-region deployment",
+        "Active-Active vs Active-Passive",
+        "Disaster recovery",
+        "Backup strategies",
+        "Chaos engineering",
+        "Circuit breaker implementations",
+        "Timeout and retry patterns",
+        "Health check strategies",
+        "Fault isolation patterns",
+        "Recovery time objectives"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a system handling 100K writes/sec with <100ms latency",
+    "How do you ensure consistency in a distributed cache?",
+    "Design a global rate limiter across multiple data centers",
+    "How would you design a system to detect celebrity users?",
+    "Explain the difference between active-active and active-passive",
+    "How do you handle cache invalidation in distributed systems?",
+    "Design a multi-region architecture for high availability",
+    "How do you implement chaos engineering in production?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.nginx.com/learn/scalability/",
+      "https://aws.amazon.com/what-is/high-availability/",
+      "https://www.redhat.com/en/topics/cloud-native-apps/what-is-scalability"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=Ek2a7b0-4fE",
+      "https://www.youtube.com/watch?v=Z-qV9wVSA9E"
+    ],
+    "practice_problems": [
+      "https://github.com/donnemartin/system-design-primer",
+      "https://www.educative.io/courses/grokking-the-system-design-interview"
+    ]
+  }
+}

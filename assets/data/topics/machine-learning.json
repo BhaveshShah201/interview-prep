@@ -1,0 +1,90 @@
+{
+  "title": "Machine Learning for Engineers",
+  "subtopics": [
+    {
+      "name": "ML Fundamentals",
+      "details": [
+        "Supervised vs Unsupervised learning",
+        "Feature engineering",
+        "Model training and validation",
+        "Overfitting and underfitting",
+        "Cross-validation techniques",
+        "Model evaluation metrics",
+        "ML algorithms overview",
+        "Data preprocessing",
+        "ML workflow",
+        "Model selection"
+      ]
+    },
+    {
+      "name": "ML in Production",
+      "details": [
+        "Model serving (TensorFlow Serving, TorchServe)",
+        "A/B testing ML models",
+        "Model versioning",
+        "Feature stores",
+        "ML pipeline orchestration",
+        "Monitoring model drift",
+        "Model deployment",
+        "Model retraining",
+        "ML infrastructure",
+        "ML model lifecycle"
+      ]
+    },
+    {
+      "name": "Recommendation Systems",
+      "details": [
+        "Collaborative filtering",
+        "Content-based filtering",
+        "Hybrid approaches",
+        "Cold start problem",
+        "Real-time vs batch recommendations",
+        "Recommendation evaluation",
+        "Personalization",
+        "Scalability issues",
+        "Recommendation bias",
+        "Privacy considerations"
+      ]
+    },
+    {
+      "name": "NLP & Search",
+      "details": [
+        "Text preprocessing",
+        "Embeddings (Word2Vec, BERT)",
+        "Search relevance",
+        "Elasticsearch optimization",
+        "Information retrieval",
+        "Query processing",
+        "Search ranking",
+        "NLP techniques",
+        "Semantic search",
+        "Search personalization"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a recommendation system for YouTube",
+    "How would you deploy ML models at scale?",
+    "Design a search ranking system",
+    "How do you handle model versioning and rollback?",
+    "How do you prevent ML model bias?",
+    "How do you evaluate recommendation systems?",
+    "How do you implement feature stores?",
+    "How do you handle model drift?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.ibm.com/cloud/learn/machine-learning-for-engineers",
+      "https://www.freecodecamp.org/news/machine-learning-for-software-engineers/",
+      "https://towardsdatascience.com/machine-learning-for-software-engineers-a-practical-guide-1c1d1e1f1e1f"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=K_000000000",
+      "https://www.youtube.com/watch?v=K_000000000"
+    ],
+    "practice_problems": [
+      "https://www.kaggle.com/competitions",
+      "https://leetcode.com/tag/machine-learning/"
+    ]
+  }
+}

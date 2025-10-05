@@ -1,0 +1,75 @@
+{
+  "title": "CI/CD & DevOps",
+  "subtopics": [
+    {
+      "name": "Pipeline Design",
+      "details": [
+        "Jenkins, GitLab CI, GitHub Actions",
+        "Pipeline as code",
+        "Artifact management",
+        "Environment promotion",
+        "Build and test parallelization",
+        "Pipeline security",
+        "Pipeline optimization",
+        "Multi-cloud pipelines",
+        "Pipeline testing",
+        "Pipeline observability"
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "details": [
+        "Terraform for multi-cloud",
+        "CloudFormation for AWS",
+        "Ansible for configuration",
+        "GitOps with ArgoCD/Flux",
+        "Infrastructure testing",
+        "State management",
+        "Infrastructure validation",
+        "Multi-cloud infrastructure",
+        "Infrastructure security",
+        "Versioned infrastructure"
+      ]
+    },
+    {
+      "name": "Monitoring & Alerting",
+      "details": [
+        "Prometheus and Grafana",
+        "ELK Stack (Elasticsearch, Logstash, Kibana)",
+        "PagerDuty integration",
+        "SLIs, SLOs, SLAs",
+        "Error budgets",
+        "Application monitoring",
+        "Infrastructure monitoring",
+        "Log aggregation",
+        "Alerting strategies",
+        "Dashboard design"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a CI/CD pipeline for 100 services",
+    "How do you ensure rollback safety?",
+    "Design a multi-cloud deployment strategy",
+    "How do you implement GitOps?",
+    "How do you manage infrastructure state?",
+    "Design an alerting system for production",
+    "How do you test infrastructure code?",
+    "How do you implement SLIs and SLOs?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.redhat.com/en/topics/devops/what-is-ci-cd",
+      "https://about.gitlab.com/topics/ci-cd/",
+      "https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=62sBu1i93pA",
+      "https://www.youtube.com/watch?v=J39p0a-2RMA"
+    ],
+    "practice_problems": [
+      "https://www.katacoda.com/courses/devops",
+      "https://github.com/bregman-arie/devops-exercises"
+    ]
+  }
+}

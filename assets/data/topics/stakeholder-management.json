@@ -1,0 +1,90 @@
+{
+  "title": "Stakeholder Management",
+  "subtopics": [
+    {
+      "name": "Communication",
+      "details": [
+        "Technical to non-technical translation",
+        "Status updates and reporting",
+        "Managing expectations",
+        "Saying \"no\" diplomatically",
+        "Communication channels",
+        "Communication frequency",
+        "Communication tools",
+        "Stakeholder mapping",
+        "Communication styles",
+        "Escalation paths"
+      ]
+    },
+    {
+      "name": "Estimation",
+      "details": [
+        "Story pointing",
+        "T-shirt sizing",
+        "Bottom-up vs top-down estimation",
+        "Handling estimation uncertainty",
+        "Buffer management",
+        "Estimation techniques",
+        "Estimation accuracy",
+        "Re-estimation",
+        "Estimation validation",
+        "Estimation tools"
+      ]
+    },
+    {
+      "name": "Risk Management",
+      "details": [
+        "Identifying technical risks",
+        "Risk mitigation strategies",
+        "Dependency management",
+        "Critical path analysis",
+        "Risk assessment",
+        "Risk communication",
+        "Risk monitoring",
+        "Contingency planning",
+        "Risk ownership",
+        "Risk documentation"
+      ]
+    },
+    {
+      "name": "Meeting Facilitation",
+      "details": [
+        "Running effective design reviews",
+        "Sprint planning",
+        "Retrospectives",
+        "Daily standups",
+        "Meeting structures",
+        "Meeting effectiveness",
+        "Meeting tools",
+        "Meeting facilitation techniques",
+        "Meeting follow-ups",
+        "Meeting productivity"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "How do you handle competing priorities from multiple stakeholders?",
+    "Describe a time you had to deliver bad news to leadership",
+    "How do you influence without authority?",
+    "Tell me about a time you had to pivot on a technical decision",
+    "How do you set realistic expectations?",
+    "How do you run effective design reviews?",
+    "How do you handle estimation disagreements?",
+    "How do you manage risks in a project?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.projectmanager.com/blog/stakeholder-management",
+      "https://www.wrike.com/project-management-guide/faq/what-is-stakeholder-management-in-project-management/",
+      "https://www.pmi.org/learning/library/stakeholder-management-strategies-6919"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=O6b_j00_00Q",
+      "https://www.youtube.com/watch?v=e0L_0000000"
+    ],
+    "practice_problems": [
+      "https://www.projectmanager.com/blog/stakeholder-management-examples",
+      "https://www.simplilearn.com/stakeholder-management-interview-questions-and-answers-article"
+    ]
+  }
+}

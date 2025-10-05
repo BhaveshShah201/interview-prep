@@ -1,0 +1,2282 @@
+{
+  "jvm_internals": {
+    "title": "JVM Internals & Performance Engineering",
+    "subtopics": [
+      {
+        "name": "Class Loading Mechanism",
+        "details": [
+          "Bootstrap, Extension, Application class loaders",
+          "Custom class loaders and class loading delegation",
+          "Runtime class generation (ASM, Byte Buddy, Javassist)",
+          "ClassLoader memory leaks in application servers",
+          "Parent delegation model and its implications",
+          "Class loading in application servers like Tomcat and JBoss",
+          "OSGi and dynamic module loading",
+          "JNI and native library loading",
+          "Security considerations in class loading",
+          "Hotswap and dynamic class reloading"
+        ]
+      },
+      {
+        "name": "JIT Compilation",
+        "details": [
+          "C1 (Client) vs C2 (Server) compilers",
+          "Tiered compilation strategies",
+          "Code cache management",
+          "Deoptimization and OSR (On-Stack Replacement)",
+          "Graal VM and AOT compilation",
+          "Method inlining and escape analysis",
+          "Profile-guided optimization",
+          "Compilation thresholds and tuning",
+          "Compiler directives and C2 settings",
+          "Performance impact of JIT compilation phases"
+        ]
+      },
+      {
+        "name": "Garbage Collection Deep Dive",
+        "details": [
+          "Serial, Parallel, CMS, G1GC, ZGC, Shenandoah",
+          "GC tuning for low-latency systems",
+          "Generational hypothesis and GC algorithms",
+          "Concurrent mark-sweep patterns",
+          "G1GC region-based collection",
+          "ZGC sub-millisecond pauses",
+          "GC logs analysis and troubleshooting",
+          "GC overhead and allocation rate considerations",
+          "Metaspace and permanent generation management",
+          "GC ergonomics and adaptive sizing"
+        ]
+      },
+      {
+        "name": "Memory Management",
+        "details": [
+          "Heap structure (Young Gen, Old Gen, Metaspace)",
+          "Stack vs Heap allocation",
+          "Escape analysis and scalar replacement",
+          "Object header and memory layout",
+          "Compressed OOPs",
+          "Native memory tracking",
+          "Memory leaks: detection and resolution",
+          "Off-heap memory (Direct ByteBuffer, Unsafe)",
+          "Memory profiling tools and techniques",
+          "Direct vs heap memory trade-offs"
+        ]
+      },
+      {
+        "name": "Performance Profiling",
+        "details": [
+          "JFR (Java Flight Recorder) and JMC",
+          "Async-profiler, YourKit, JProfiler",
+          "Flame graphs interpretation",
+          "Thread dump analysis",
+          "Heap dump analysis (MAT, VisualVM)",
+          "CPU vs Memory profiling strategies",
+          "Performance bottleneck identification",
+          "Sampling vs instrumentation profiling",
+          "Production profiling best practices",
+          "Performance regression testing"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Explain how G1GC handles large heaps differently from CMS",
+      "Your service has memory leaks in production. Walk me through your debugging approach",
+      "Design a custom class loader for plugin architecture",
+      "How would you optimize GC pauses for a 100GB heap?",
+      "Explain the trade-offs between different garbage collectors for a high-throughput system",
+      "How does escape analysis optimize memory allocation?",
+      "What happens during a full GC and how can you minimize it?"
+    ]
+  },
+  "advanced_concurrency": {
+    "title": "Advanced Concurrency & Multithreading",
+    "subtopics": [
+      {
+        "name": "Java Memory Model (JMM)",
+        "details": [
+          "Happens-before relationship",
+          "Memory visibility and ordering",
+          "Volatile semantics and memory barriers",
+          "Final field semantics",
+          "Safe publication idioms",
+          "Sequential consistency vs. relaxed consistency",
+          "Memory model implementation in different architectures",
+          "Double-checked locking and JMM guarantees",
+          "Atomic operations and memory effects",
+          "JMM impact on performance"
+        ]
+      },
+      {
+        "name": "Advanced Synchronization",
+        "details": [
+          "Lock-free algorithms (CAS operations)",
+          "ABA problem and solutions",
+          "StampedLock for optimistic reads",
+          "Phaser for complex synchronization",
+          "LongAdder vs AtomicLong performance",
+          "ReentrantLock features and condition variables",
+          "ReadWriteLock and performance considerations",
+          "ForkJoinPool and work-stealing algorithm",
+          "Structured locking patterns",
+          "Deadlock prevention and detection"
+        ]
+      },
+      {
+        "name": "Concurrent Data Structures",
+        "details": [
+          "ConcurrentHashMap internals (segment locking)",
+          "CopyOnWriteArrayList use cases",
+          "ConcurrentSkipListMap",
+          "Lock-free queues (ConcurrentLinkedQueue)",
+          "BlockingQueue implementations",
+          "Thread-safe collections performance comparison",
+          "Non-blocking algorithms and design patterns",
+          "Wait-free and lock-free data structures",
+          "Memory consistency and visibility in concurrent collections",
+          "Scalability characteristics of different structures"
+        ]
+      },
+      {
+        "name": "Thread Pool Deep Dive",
+        "details": [
+          "ThreadPoolExecutor internals",
+          "Fork/Join framework and work-stealing",
+          "Custom ThreadPoolExecutor configurations",
+          "Thread pool sizing strategies",
+          "Rejection policies",
+          "ThreadFactory customization",
+          "ExecutorService lifecycle management",
+          "Performance tuning of thread pools",
+          "Virtual threads integration (Project Loom)",
+          "Thread pool monitoring and metrics"
+        ]
+      },
+      {
+        "name": "Reactive Programming",
+        "details": [
+          "Project Reactor fundamentals",
+          "Backpressure handling",
+          "Reactive Streams specification",
+          "WebFlux internals",
+          "Virtual Threads (Project Loom - Java 21)",
+          "Reactive vs imperative performance trade-offs",
+          "Error handling in reactive streams",
+          "Schedulers and thread management",
+          "Reactive patterns for microservices",
+          "Flow control and buffering strategies"
+        ]
+      },
+      {
+        "name": "Concurrency Patterns",
+        "details": [
+          "Double-checked locking (DCL) pitfalls",
+          "Thread-safe Singleton patterns",
+          "Producer-Consumer pattern",
+          "Readers-Writers problem",
+          "Dining Philosophers problem",
+          "Active Object pattern",
+          "Monitor Object pattern",
+          "Leader-Follower pattern",
+          "Thread Pool pattern",
+          "Half-Sync/Half-Async pattern"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Implement a thread-safe LRU cache without using Collections.synchronizedMap",
+      "Explain why double-checked locking was broken before Java 5",
+      "Design a rate limiter using concurrent primitives",
+      "How does ConcurrentHashMap achieve thread safety without locking the entire map?",
+      "When would you use Virtual Threads vs Platform Threads?",
+      "Explain the ABA problem and how to solve it",
+      "What's the difference between ReentrantLock and synchronized keyword?",
+      "How do you handle backpressure in reactive systems?"
+    ]
+  },
+  "modern_java": {
+    "title": "Modern Java (8-21) Advanced Features",
+    "subtopics": [
+      {
+        "name": "Functional Programming",
+        "details": [
+          "Method references and lambda internals",
+          "Functional interfaces design patterns",
+          "Combinator pattern",
+          "Currying and partial application",
+          "Monads in Java (Optional, Stream, CompletableFuture)",
+          "Functional programming best practices",
+          "Higher-order functions",
+          "Immutability and pure functions",
+          "Functional vs imperative performance",
+          "Functional error handling with Either pattern"
+        ]
+      },
+      {
+        "name": "Streams API Mastery",
+        "details": [
+          "Stream internals and spliterators",
+          "Parallel streams and performance",
+          "Custom collectors",
+          "Lazy evaluation and short-circuiting",
+          "Stream debugging techniques",
+          "Primitive specializations (IntStream, LongStream, DoubleStream)",
+          "Grouping, partitioning, and downstream collectors",
+          "Performance considerations and complexity analysis",
+          "Stream chaining and intermediate operations",
+          "Stream limitations and alternatives"
+        ]
+      },
+      {
+        "name": "CompletableFuture & Async Programming",
+        "details": [
+          "Composition methods (thenCompose, thenCombine)",
+          "Exception handling in async chains",
+          "Custom executors with CF",
+          "Performance pitfalls",
+          "Async/await patterns in Java",
+          "Timeout handling and fallback strategies",
+          "Async programming best practices",
+          "Thread safety in async contexts",
+          "Resource management in async operations",
+          "Testing async code effectively"
+        ]
+      },
+      {
+        "name": "Records, Sealed Classes & Pattern Matching",
+        "details": [
+          "Record patterns and deconstruction",
+          "Sealed class hierarchies for domain modeling",
+          "Switch expressions and pattern matching",
+          "Exhaustiveness checking",
+          "Value-based classes and records",
+          "Pattern matching in switch statements",
+          "Sealed interfaces and permits",
+          "Migration patterns from POJOs",
+          "Serialization considerations",
+          "Performance benefits of records"
+        ]
+      },
+      {
+        "name": "Project Loom (Virtual Threads - Java 21)",
+        "details": [
+          "Virtual threads vs Platform threads",
+          "Structured concurrency",
+          "Continuations and thread parking",
+          "When to use virtual threads",
+          "Migration strategies",
+          "Performance implications and benchmarks",
+          "Integration with existing frameworks",
+          "Virtual thread debugging and monitoring",
+          "Blocking operations and scalability",
+          "Structured tasks and scope management"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Why can't you reuse a Stream? How would you design a reusable Stream?",
+      "Implement a parallel stream that processes elements in batches",
+      "Design an async pipeline using CompletableFuture with error handling",
+      "How do virtual threads change the way we design concurrent systems?",
+      "What's the difference between thenCompose and thenCombine in CompletableFuture?",
+      "Explain the performance benefits of records over traditional POJOs",
+      "When would you use sealed classes instead of enums?",
+      "How do you handle exceptions in parallel streams?"
+    ]
+  },
+  "design_patterns": {
+    "title": "Gang of Four + Enterprise Patterns",
+    "subtopics": [
+      {
+        "name": "Creational (Advanced)",
+        "details": [
+          "Thread-safe Singleton (5 implementations)",
+          "Abstract Factory for multi-database support",
+          "Prototype with deep cloning",
+          "Object Pool pattern",
+          "Multiton pattern",
+          "Builder pattern with step builders",
+          "Factory Method vs Abstract Factory",
+          "Creational patterns and dependency injection",
+          "Creational patterns in Spring framework",
+          "Creational anti-patterns and performance"
+        ]
+      },
+      {
+        "name": "Structural (Production)",
+        "details": [
+          "Decorator vs Proxy (when to use each)",
+          "Flyweight for memory optimization",
+          "Composite for hierarchical data",
+          "Bridge for platform abstraction",
+          "Facade for legacy system integration",
+          "Adapter and wrapper patterns",
+          "Structural patterns in API design",
+          "Adapter patterns for legacy integration",
+          "Structural patterns performance impact",
+          "Combining multiple structural patterns"
+        ]
+      },
+      {
+        "name": "Behavioral (Real-world)",
+        "details": [
+          "Strategy with Spring's bean injection",
+          "Observer pattern vs Event-driven systems",
+          "Command pattern for undo/redo",
+          "Interpreter for DSL design",
+          "Mediator for complex workflows",
+          "State machine implementations",
+          "Template Method and framework design",
+          "Visitor pattern for operations on structures",
+          "Iterator and composite pattern combination",
+          "Behavioral patterns in event sourcing"
+        ]
+      },
+      {
+        "name": "Concurrency Patterns",
+        "details": [
+          "Thread Pool pattern",
+          "Active Object",
+          "Monitor Object",
+          "Half-Sync/Half-Async",
+          "Leader-Follower",
+          "Thread-Specific Storage",
+          "Guarded Suspension",
+          "Thread-Local Storage",
+          "Message Queue patterns",
+          "Producer-Consumer variations"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a plugin system using multiple design patterns",
+      "Implement Strategy pattern without if-else using Spring",
+      "How does Hibernate use Proxy pattern? Can you implement similar logic?",
+      "Design a rule engine using Chain of Responsibility + Strategy",
+      "When would you use Observer vs Mediator pattern?",
+      "Explain the difference between Adapter, Decorator, and Facade patterns",
+      "How do you implement a thread-safe Singleton?",
+      "Design a state machine for order processing using design patterns"
+    ]
+  },
+  "distributed_patterns": {
+    "title": "Distributed Systems Patterns",
+    "subtopics": [
+      {
+        "name": "Resilience Patterns",
+        "details": [
+          "Circuit Breaker (Hystrix, Resilience4j)",
+          "Bulkhead (isolating resources)",
+          "Retry with exponential backoff",
+          "Timeout patterns",
+          "Fallback strategies",
+          "Health checks and heartbeats",
+          "Rate limiting and throttling",
+          "Circuit breaker state transitions",
+          "Bulkhead isolation strategies",
+          "Resilience patterns in microservices"
+        ]
+      },
+      {
+        "name": "Data Patterns",
+        "details": [
+          "Saga pattern (Choreography vs Orchestration)",
+          "Event Sourcing",
+          "CQRS (Command Query Responsibility Segregation)",
+          "Outbox pattern for reliable messaging",
+          "Change Data Capture (CDC)",
+          "Two-Phase Commit (2PC)",
+          "Three-Phase Commit (3PC)",
+          "Event-driven architecture patterns",
+          "Data consistency models",
+          "Distributed data patterns trade-offs"
+        ]
+      },
+      {
+        "name": "Service Communication",
+        "details": [
+          "API Gateway pattern",
+          "Backend for Frontend (BFF)",
+          "Service Mesh (Istio, Linkerd)",
+          "Sidecar pattern",
+          "Ambassador pattern",
+          "Anti-corruption layer",
+          "API versioning strategies",
+          "Service communication protocols",
+          "Asynchronous vs synchronous communication",
+          "Service discovery and load balancing"
+        ]
+      },
+      {
+        "name": "Deployment Patterns",
+        "details": [
+          "Blue-Green deployment",
+          "Canary releases",
+          "Feature toggles/flags",
+          "Strangler Fig pattern",
+          "Database-per-service",
+          "Shared database anti-pattern",
+          "Deployment pipeline patterns",
+          "Zero-downtime deployment strategies",
+          "Rollback and recovery patterns",
+          "Immutable infrastructure patterns"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a distributed transaction system without 2PC",
+      "How would you implement Saga pattern for order processing?",
+      "Explain when Circuit Breaker should trip and recover",
+      "Design an event sourcing system for banking transactions",
+      "What's the difference between Saga choreography and orchestration?",
+      "How do you implement eventual consistency in distributed systems?",
+      "Explain the trade-offs of service mesh vs traditional API gateways",
+      "Design a feature flag system for global rollout"
+    ]
+  },
+  "spring_framework": {
+    "title": "Spring Framework Deep Dive",
+    "subtopics": [
+      {
+        "name": "IoC Container Internals",
+        "details": [
+          "BeanFactory vs ApplicationContext",
+          "Bean lifecycle (11 phases)",
+          "BeanPostProcessor and BeanFactoryPostProcessor",
+          "Circular dependency resolution",
+          "Custom scope implementation",
+          "Lazy initialization strategies",
+          "Bean definition and registration",
+          "Dependency injection mechanisms",
+          "Bean factory post-processing",
+          "Container lifecycle management"
+        ]
+      },
+      {
+        "name": "AOP (Aspect-Oriented Programming)",
+        "details": [
+          "JDK Dynamic Proxy vs CGLIB",
+          "AspectJ weaving (compile-time, load-time)",
+          "Pointcut expressions",
+          "Around advice performance",
+          "AOP limitations and workarounds",
+          "Introduction and inter-type declarations",
+          "AOP proxy mechanisms",
+          "Performance impact of AOP",
+          "AOP weaving strategies",
+          "CGLIB proxy limitations"
+        ]
+      },
+      {
+        "name": "Transaction Management",
+        "details": [
+          "Programmatic vs Declarative",
+          "Propagation levels (7 types)",
+          "Isolation levels and their impact",
+          "Read-only optimization",
+          "Transaction rollback rules",
+          "Distributed transactions with XA",
+          "Transaction synchronization",
+          "Transaction manager configuration",
+          "Isolation level trade-offs",
+          "Transaction performance considerations"
+        ]
+      },
+      {
+        "name": "Spring Boot Internals",
+        "details": [
+          "Auto-configuration mechanism",
+          "Conditional annotations",
+          "Starter dependencies design",
+          "Embedded server configuration",
+          "Actuator endpoints customization",
+          "Spring Boot vs Spring Cloud",
+          "Spring Boot startup sequence",
+          "Application context hierarchy",
+          "Environment and property sources",
+          "Spring Boot externalized configuration"
+        ]
+      },
+      {
+        "name": "Performance Optimization",
+        "details": [
+          "Bean creation overhead",
+          "Lazy loading strategies",
+          "Connection pool tuning (HikariCP)",
+          "Caching strategies",
+          "Async processing (@Async)",
+          "Spring AOP performance tuning",
+          "Component scanning optimization",
+          "Spring Data JPA tuning",
+          "Memory management in Spring apps",
+          "Spring Boot startup time optimization"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Why does @Transactional not work on private methods?",
+      "Design a custom Spring Boot starter",
+      "How would you debug circular dependency issues?",
+      "Explain how Spring resolves beans when multiple candidates exist",
+      "What happens if a transaction method calls another @Transactional method in the same class?",
+      "How does Spring implement method-level security?",
+      "Explain the difference between @Component, @Service, @Repository",
+      "How do you customize Spring Boot auto-configuration?",
+      "What are the performance implications of Spring AOP?"
+    ]
+  },
+  "spring_boot": {
+    "title": "Spring Boot Production Patterns",
+    "subtopics": [
+      {
+        "name": "Monitoring & Observability",
+        "details": [
+          "Custom Actuator endpoints",
+          "Micrometer metrics",
+          "Distributed tracing (Sleuth, Zipkin, Jaeger)",
+          "Prometheus integration",
+          "Grafana dashboards",
+          "Custom health indicators",
+          "Logback configuration and log levels",
+          "Application performance monitoring",
+          "Tracing request flows",
+          "Observability best practices"
+        ]
+      },
+      {
+        "name": "Security",
+        "details": [
+          "OAuth 2.0 / OpenID Connect",
+          "JWT implementation and validation",
+          "Method-level security",
+          "CSRF protection",
+          "CORS configuration",
+          "Security headers",
+          "Rate limiting",
+          "Authentication vs authorization",
+          "Security configuration patterns",
+          "Secure coding practices"
+        ]
+      },
+      {
+        "name": "Testing Strategies",
+        "details": [
+          "Integration testing with Testcontainers",
+          "Mocking external services (WireMock)",
+          "Contract testing (Spring Cloud Contract)",
+          "Performance testing",
+          "Chaos engineering",
+          "Test-driven development with Spring",
+          "Spring test slices",
+          "MockMvc and WebTestClient",
+          "Test data management",
+          "End-to-end testing strategies"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a zero-downtime deployment strategy for Spring Boot",
+      "How would you implement distributed tracing across 50 microservices?",
+      "Design a multi-tenant application with Spring Boot",
+      "How do you secure Spring Boot applications?",
+      "Explain the difference between @MockBean and @SpyBean",
+      "How do you implement custom actuator endpoints?",
+      "What are the best practices for Spring Boot testing?",
+      "How do you handle database migrations in Spring Boot?"
+    ]
+  },
+  "microservices": {
+    "title": "Microservices Architecture",
+    "subtopics": [
+      {
+        "name": "Service Design",
+        "details": [
+          "Domain-Driven Design (DDD)",
+          "Bounded contexts",
+          "Service boundaries",
+          "API versioning strategies",
+          "Backward compatibility",
+          "Service contracts and schemas",
+          "Domain events and messaging",
+          "Service granularity principles",
+          "Data ownership and consistency",
+          "Service discovery and communication"
+        ]
+      },
+      {
+        "name": "Communication",
+        "details": [
+          "Synchronous (REST, gRPC, GraphQL)",
+          "Asynchronous (Kafka, RabbitMQ, SQS)",
+          "WebSockets for real-time",
+          "Server-Sent Events (SSE)",
+          "API design best practices",
+          "Message formats and serialization",
+          "Communication patterns and protocols",
+          "API documentation and discovery",
+          "Service mesh communication",
+          "Service-to-service authentication"
+        ]
+      },
+      {
+        "name": "Service Discovery",
+        "details": [
+          "Client-side discovery (Eureka)",
+          "Server-side discovery (Consul, Kubernetes)",
+          "DNS-based discovery",
+          "Health checking mechanisms",
+          "Load balancing strategies",
+          "Service registration patterns",
+          "Discovery cache and TTL",
+          "Service mesh discovery",
+          "Cross-datacenter discovery",
+          "Service mesh vs traditional discovery"
+        ]
+      },
+      {
+        "name": "API Gateway",
+        "details": [
+          "Spring Cloud Gateway",
+          "Kong, Nginx",
+          "Rate limiting",
+          "Request aggregation",
+          "Authentication/Authorization",
+          "Request/response transformation",
+          "API composition patterns",
+          "Gateway performance considerations",
+          "API lifecycle management",
+          "Gateway security patterns"
+        ]
+      },
+      {
+        "name": "Configuration Management",
+        "details": [
+          "Spring Cloud Config",
+          "Consul KV store",
+          "Environment-specific configs",
+          "Secret management (Vault, AWS Secrets Manager)",
+          "Configuration refresh strategies",
+          "Externalized configuration",
+          "Configuration validation",
+          "Dynamic configuration updates",
+          "Configuration security",
+          "Configuration change tracking"
+        ]
+      },
+      {
+        "name": "Observability Stack",
+        "details": [
+          "Logging (ELK stack, Loki)",
+          "Metrics (Prometheus, Grafana)",
+          "Tracing (Jaeger, Zipkin)",
+          "Alerts and SLOs",
+          "Distributed monitoring",
+          "Service mesh observability",
+          "Cost monitoring",
+          "Performance analysis",
+          "Alerting strategies",
+          "Observability pipelines"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a microservices architecture for Netflix-scale streaming",
+      "How do you handle versioning when 100 services depend on your API?",
+      "Design a service mesh for 500 microservices",
+      "How would you migrate from monolith to microservices?",
+      "How do you handle distributed transactions in microservices?",
+      "What are the trade-offs between synchronous and asynchronous communication?",
+      "How do you implement circuit breakers in microservices?",
+      "How do you ensure data consistency across microservices?"
+    ]
+  },
+  "kafka": {
+    "title": "Kafka & Event Streaming",
+    "subtopics": [
+      {
+        "name": "Core Concepts",
+        "details": [
+          "Broker architecture",
+          "Partition leadership and ISR",
+          "Replication and fault tolerance",
+          "Consumer groups and rebalancing",
+          "Offset management",
+          "Topic and partition design",
+          "Kafka cluster architecture",
+          "Zookeeper vs KRaft mode",
+          "Kafka controller and coordinator",
+          "Message ordering guarantees"
+        ]
+      },
+      {
+        "name": "Performance Optimization",
+        "details": [
+          "Batch processing",
+          "Compression (gzip, snappy, lz4, zstd)",
+          "Producer acknowledgments",
+          "Consumer fetch strategies",
+          "Memory tuning",
+          "Partitioning strategies",
+          "Network configuration",
+          "JVM tuning for Kafka",
+          "Performance monitoring",
+          "Throughput vs latency trade-offs"
+        ]
+      },
+      {
+        "name": "Exactly-Once Semantics",
+        "details": [
+          "Idempotent producer",
+          "Transactional producer",
+          "Offset commit strategies",
+          "End-to-end exactly-once",
+          "Transaction coordinator",
+          "Producer and consumer synchronization",
+          "Duplicate handling",
+          "Transaction boundaries",
+          "Transactional guarantees",
+          "Performance impact of transactions"
+        ]
+      },
+      {
+        "name": "Kafka Streams",
+        "details": [
+          "Stateful vs stateless operations",
+          "Windowing operations",
+          "Joins (KStream-KStream, KStream-KTable)",
+          "State stores",
+          "Stream processing topologies",
+          "Reprocessing and reset tools",
+          "Interactive queries",
+          "Stream processing patterns",
+          "Kafka Streams vs KSQL",
+          "Kafka Streams vs Spark Streaming"
+        ]
+      },
+      {
+        "name": "Schema Evolution",
+        "details": [
+          "Avro schema registry",
+          "Backward/forward compatibility",
+          "Schema versioning",
+          "Schema validation",
+          "Schema evolution strategies",
+          "Confluent Schema Registry",
+          "Schema evolution testing",
+          "Breaking change detection",
+          "Schema management tools",
+          "Schema governance"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a Kafka architecture for processing 1 million events/sec",
+      "How do you handle duplicate messages in Kafka?",
+      "Explain how Kafka guarantees ordering",
+      "Design a CDC pipeline using Kafka Connect",
+      "How would you replay events from 3 months ago?",
+      "What's the difference between Kafka Streams and KSQL?",
+      "How do you handle schema evolution in Kafka?",
+      "Explain the trade-offs between different Kafka compression algorithms"
+    ]
+  },
+  "advanced_sql": {
+    "title": "Advanced SQL & Database Design",
+    "subtopics": [
+      {
+        "name": "Query Optimization",
+        "details": [
+          "Execution plans analysis",
+          "Index types (B-tree, Hash, Bitmap, Full-text)",
+          "Composite indexes strategy",
+          "Covering indexes",
+          "Index-only scans",
+          "Query rewriting techniques",
+          "Query execution statistics",
+          "Optimizer hints and directives",
+          "Cost-based vs rule-based optimization",
+          "Database statistics and cardinality"
+        ]
+      },
+      {
+        "name": "Advanced SQL",
+        "details": [
+          "Window functions (ROW_NUMBER, RANK, LAG, LEAD)",
+          "CTEs (Common Table Expressions)",
+          "Recursive queries",
+          "Pivot and unpivot",
+          "JSON functions",
+          "Complex aggregations",
+          "Analytical functions",
+          "Advanced joins and set operations",
+          "SQL performance patterns",
+          "Recursive CTEs for hierarchies"
+        ]
+      },
+      {
+        "name": "Transaction Management",
+        "details": [
+          "ACID properties",
+          "Isolation levels (Read Uncommitted → Serializable)",
+          "Phantom reads, dirty reads, non-repeatable reads",
+          "Optimistic vs Pessimistic locking",
+          "MVCC (Multi-Version Concurrency Control)",
+          "Transaction boundaries",
+          "Deadlock detection and prevention",
+          "Distributed transaction coordination",
+          "Isolation level trade-offs",
+          "Long-running transaction management"
+        ]
+      },
+      {
+        "name": "Database Scaling",
+        "details": [
+          "Vertical vs Horizontal scaling",
+          "Read replicas",
+          "Sharding strategies (Range, Hash, Geographic)",
+          "Partitioning (Range, List, Hash)",
+          "Database connection pooling",
+          "Federated databases",
+          "Database sharding challenges",
+          "Cross-shard queries",
+          "Shard rebalancing strategies",
+          "Consistent hashing"
+        ]
+      },
+      {
+        "name": "NoSQL Patterns",
+        "details": [
+          "Document stores (MongoDB)",
+          "Key-value stores (Redis, DynamoDB)",
+          "Column-family (Cassandra)",
+          "Graph databases (Neo4j)",
+          "CAP theorem trade-offs",
+          "Eventual vs strong consistency",
+          "NoSQL schema design",
+          "Query patterns in NoSQL",
+          "NoSQL vs SQL trade-offs",
+          "Polyglot persistence"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a database schema for Instagram with 1 billion users",
+      "How would you shard a multi-tenant SaaS database?",
+      "Optimize this slow query (complex join scenario)",
+      "Design a real-time leaderboard system",
+      "How do you handle database migrations with zero downtime?",
+      "Explain the trade-offs between different isolation levels",
+      "How do you implement optimistic locking?",
+      "Design a system for handling 100K writes/sec to a database"
+    ]
+  },
+  "jpa_hibernate": {
+    "title": "JPA & Hibernate Internals",
+    "subtopics": [
+      {
+        "name": "Entity Management",
+        "details": [
+          "Entity lifecycle and state transitions",
+          "First-level cache (Session cache)",
+          "Second-level cache (Ehcache, Hazelcast)",
+          "Query cache",
+          "Cache eviction strategies",
+          "Entity state management",
+          "Persistence context",
+          "Entity relationships and mappings",
+          "Lazy loading and N+1 problems",
+          "Entity event listeners"
+        ]
+      },
+      {
+        "name": "Performance Tuning",
+        "details": [
+          "N+1 query problem solutions",
+          "Batch fetching",
+          "Lazy vs Eager loading",
+          "Fetch join strategies",
+          "DTO projections",
+          "StatelessSession for batch operations",
+          "Query optimization techniques",
+          "Connection pool tuning",
+          "Hibernate statistics and metrics",
+          "SQL logging and analysis"
+        ]
+      },
+      {
+        "name": "Advanced Mappings",
+        "details": [
+          "Inheritance strategies (Single Table, Joined, Table per Class)",
+          "Composite keys",
+          "Embeddable objects",
+          "Element collections",
+          "Custom types and converters",
+          "Formula mappings",
+          "Collection mappings",
+          "Association mappings",
+          "Mapping inheritance hierarchies",
+          "Embedding value objects"
+        ]
+      },
+      {
+        "name": "Concurrency",
+        "details": [
+          "Optimistic locking (@Version)",
+          "Pessimistic locking",
+          "LockModeType strategies",
+          "Concurrency control patterns",
+          "Transaction isolation in JPA",
+          "Lock timeout handling",
+          "Pessimistic vs optimistic trade-offs",
+          "Lock escalation",
+          "Deadlock prevention",
+          "Versioned entities"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How do you detect and fix N+1 queries in production?",
+      "Design an optimal caching strategy for a read-heavy system",
+      "Explain Hibernate's dirty checking mechanism",
+      "How would you batch insert 1 million records efficiently?",
+      "What's the difference between @JoinColumn and @JoinTable?",
+      "How do you handle inheritance in JPA?",
+      "Explain the different fetch strategies in JPA",
+      "When would you use @ElementCollection vs @OneToMany?"
+    ]
+  },
+  "scalability_ha": {
+    "title": "Scalability & High Availability",
+    "subtopics": [
+      {
+        "name": "Load Balancing",
+        "details": [
+          "L4 (Transport) vs L7 (Application) load balancers",
+          "Load balancing algorithms (Round-robin, Least connections, IP hash)",
+          "Health checks and circuit breaking",
+          "Session persistence strategies",
+          "Global load balancing",
+          "Load balancer failure scenarios",
+          "Dynamic load balancing",
+          "Content-aware routing",
+          "Load balancer configuration",
+          "Load balancing at different layers"
+        ]
+      },
+      {
+        "name": "Caching Strategies",
+        "details": [
+          "Cache-aside (Lazy loading)",
+          "Write-through",
+          "Write-behind (Write-back)",
+          "Refresh-ahead",
+          "Cache invalidation strategies",
+          "CDN for static content",
+          "Distributed caching (Redis cluster)",
+          "Cache warming strategies",
+          "Cache consistency patterns",
+          "Multi-tier caching"
+        ]
+      },
+      {
+        "name": "Horizontal Scaling",
+        "details": [
+          "Stateless service design",
+          "Session management (Redis, Hazelcast)",
+          "Database sharding",
+          "Consistent hashing",
+          "Service discovery and scaling",
+          "Auto-scaling policies",
+          "Container orchestration",
+          "Scaling metrics and thresholds",
+          "Scaling patterns",
+          "Elastic scaling strategies"
+        ]
+      },
+      {
+        "name": "Reliability Patterns",
+        "details": [
+          "Multi-region deployment",
+          "Active-Active vs Active-Passive",
+          "Disaster recovery",
+          "Backup strategies",
+          "Chaos engineering",
+          "Circuit breaker implementations",
+          "Timeout and retry patterns",
+          "Health check strategies",
+          "Fault isolation patterns",
+          "Recovery time objectives"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a system handling 100K writes/sec with <100ms latency",
+      "How do you ensure consistency in a distributed cache?",
+      "Design a global rate limiter across multiple data centers",
+      "How would you design a system to detect celebrity users?",
+      "Explain the difference between active-active and active-passive",
+      "How do you handle cache invalidation in distributed systems?",
+      "Design a multi-region architecture for high availability",
+      "How do you implement chaos engineering in production?"
+    ]
+  },
+  "dsa_advanced": {
+    "title": "Advanced DSA for Tech Leads",
+    "subtopics": [
+      {
+        "name": "Complex Data Structures",
+        "details": [
+          "Trie (Prefix tree) for autocomplete",
+          "Segment Tree for range queries",
+          "Fenwick Tree (Binary Indexed Tree)",
+          "Disjoint Set (Union-Find)",
+          "Skip List",
+          "Bloom Filter for membership tests",
+          "Count-Min Sketch",
+          "HyperLogLog for cardinality estimation",
+          "Advanced tree variations",
+          "Space-time complexity trade-offs"
+        ]
+      },
+      {
+        "name": "Graph Algorithms",
+        "details": [
+          "Dijkstra's shortest path",
+          "Bellman-Ford algorithm",
+          "Floyd-Warshall",
+          "Topological sort",
+          "Minimum Spanning Tree (Kruskal, Prim)",
+          "Strongly Connected Components",
+          "Network flow algorithms",
+          "Advanced graph traversals",
+          "Graph partitioning",
+          "Graph algorithms optimization"
+        ]
+      },
+      {
+        "name": "Advanced Tree Problems",
+        "details": [
+          "Segment trees",
+          "Binary lifting",
+          "LCA (Lowest Common Ancestor)",
+          "Tree DP problems",
+          "Advanced tree traversals",
+          "Tree serialization",
+          "Balanced tree implementations",
+          "Tree algorithms complexity",
+          "Tree decomposition",
+          "Advanced tree queries"
+        ]
+      },
+      {
+        "name": "String Algorithms",
+        "details": [
+          "KMP pattern matching",
+          "Rabin-Karp algorithm",
+          "Z-algorithm",
+          "Suffix arrays",
+          "Aho-Corasick automaton",
+          "String processing techniques",
+          "Palindrome algorithms",
+          "String matching optimizations",
+          "Trie applications in strings",
+          "Compression algorithms"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design and implement a thread-safe LRU cache",
+      "Find the median in a data stream",
+      "Design a time-based key-value store",
+      "Implement a distributed hash table",
+      "Design a consistent hashing ring",
+      "Implement a bloom filter",
+      "How would you find the shortest path in a weighted graph?",
+      "Design an algorithm for pattern matching in large text files"
+    ]
+  },
+  "aws_deep_dive": {
+    "title": "AWS Deep Dive",
+    "subtopics": [
+      {
+        "name": "Compute",
+        "details": [
+          "EC2 instance types and selection",
+          "Auto Scaling Groups",
+          "ECS vs EKS vs Fargate",
+          "Lambda functions and cold starts",
+          "Lambda layers and extensions",
+          "Lambda@Edge for CDN",
+          "Batch and serverless computing",
+          "Container orchestration",
+          "Compute optimization",
+          "Instance placement strategies"
+        ]
+      },
+      {
+        "name": "Storage",
+        "details": [
+          "S3 storage classes and lifecycle",
+          "EBS volume types",
+          "EFS for shared storage",
+          "Glacier for archival",
+          "Elastic Block Store optimization",
+          "Storage security",
+          "Cross-region replication",
+          "Storage cost optimization",
+          "Object storage patterns",
+          "File system comparison"
+        ]
+      },
+      {
+        "name": "Database",
+        "details": [
+          "RDS Multi-AZ vs Read Replicas",
+          "Aurora PostgreSQL/MySQL",
+          "DynamoDB design patterns",
+          "ElastiCache (Redis/Memcached)",
+          "Redshift for analytics",
+          "Database migration strategies",
+          "Database backup and recovery",
+          "Database monitoring",
+          "NoSQL vs SQL in AWS",
+          "Database scaling patterns"
+        ]
+      },
+      {
+        "name": "Networking",
+        "details": [
+          "VPC design and subnetting",
+          "Security Groups vs NACLs",
+          "VPC Peering and Transit Gateway",
+          "Direct Connect and VPN",
+          "Route 53 routing policies",
+          "CloudFront CDN",
+          "Network security",
+          "Network monitoring",
+          "Hybrid cloud networking",
+          "Network optimization"
+        ]
+      },
+      {
+        "name": "Monitoring & Operations",
+        "details": [
+          "CloudWatch metrics and logs",
+          "X-Ray for distributed tracing",
+          "CloudTrail for audit",
+          "Systems Manager",
+          "Cost optimization strategies",
+          "AWS Config and compliance",
+          "Operations automation",
+          "Event-driven operations",
+          "Infrastructure monitoring",
+          "Log analysis and alerts"
+        ]
+      },
+      {
+        "name": "Security",
+        "details": [
+          "IAM roles and policies",
+          "Secrets Manager",
+          "KMS for encryption",
+          "WAF and Shield for DDoS",
+          "GuardDuty for threat detection",
+          "Security compliance",
+          "Data encryption strategies",
+          "Security monitoring",
+          "Identity federation",
+          "Security best practices"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a multi-region, highly available architecture on AWS",
+      "How would you optimize AWS costs for a startup?",
+      "Design a serverless event-driven architecture",
+      "How do you ensure zero-downtime deployments?",
+      "Explain the differences between EBS volume types",
+      "How do you implement cross-region disaster recovery?",
+      "How do you secure data in transit and at rest?",
+      "Design a monitoring strategy for microservices on AWS"
+    ]
+  },
+  "kubernetes": {
+    "title": "Kubernetes & Container Orchestration",
+    "subtopics": [
+      {
+        "name": "Core Concepts",
+        "details": [
+          "Pods, ReplicaSets, Deployments",
+          "Services (ClusterIP, NodePort, LoadBalancer)",
+          "Ingress controllers",
+          "ConfigMaps and Secrets",
+          "Persistent Volumes and Claims",
+          "StatefulSets for stateful apps",
+          "Kubernetes architecture",
+          "Control plane components",
+          "Node and cluster management",
+          "Container orchestration patterns"
+        ]
+      },
+      {
+        "name": "Advanced Topics",
+        "details": [
+          "DaemonSets and Jobs",
+          "HorizontalPodAutoscaler",
+          "Custom Resource Definitions (CRDs)",
+          "Operators",
+          "Helm charts",
+          "Service mesh (Istio, Linkerd)",
+          "Kubernetes networking",
+          "Storage management",
+          "Kubernetes APIs",
+          "Custom controllers"
+        ]
+      },
+      {
+        "name": "Production Patterns",
+        "details": [
+          "Blue-green deployments",
+          "Canary releases",
+          "Rolling updates",
+          "Resource limits and requests",
+          "Network policies",
+          "RBAC (Role-Based Access Control)",
+          "Pod Security Policies",
+          "Kubernetes monitoring",
+          "Cluster autoscaling",
+          "Production security"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a Kubernetes cluster for 100 microservices",
+      "How do you handle secrets in Kubernetes?",
+      "Explain how Kubernetes scheduling works",
+      "Design a CI/CD pipeline with Kubernetes",
+      "How do you implement blue-green deployment in Kubernetes?",
+      "How do you secure a Kubernetes cluster?",
+      "Explain the difference between Services and Ingress",
+      "How do you handle persistent storage in Kubernetes?"
+    ]
+  },
+  "cicd_devops": {
+    "title": "CI/CD & DevOps",
+    "subtopics": [
+      {
+        "name": "Pipeline Design",
+        "details": [
+          "Jenkins, GitLab CI, GitHub Actions",
+          "Pipeline as code",
+          "Artifact management",
+          "Environment promotion",
+          "Build and test parallelization",
+          "Pipeline security",
+          "Pipeline optimization",
+          "Multi-cloud pipelines",
+          "Pipeline testing",
+          "Pipeline observability"
+        ]
+      },
+      {
+        "name": "Infrastructure as Code",
+        "details": [
+          "Terraform for multi-cloud",
+          "CloudFormation for AWS",
+          "Ansible for configuration",
+          "GitOps with ArgoCD/Flux",
+          "Infrastructure testing",
+          "State management",
+          "Infrastructure validation",
+          "Multi-cloud infrastructure",
+          "Infrastructure security",
+          "Versioned infrastructure"
+        ]
+      },
+      {
+        "name": "Monitoring & Alerting",
+        "details": [
+          "Prometheus and Grafana",
+          "ELK Stack (Elasticsearch, Logstash, Kibana)",
+          "PagerDuty integration",
+          "SLIs, SLOs, SLAs",
+          "Error budgets",
+          "Application monitoring",
+          "Infrastructure monitoring",
+          "Log aggregation",
+          "Alerting strategies",
+          "Dashboard design"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a CI/CD pipeline for 100 services",
+      "How do you ensure rollback safety?",
+      "Design a multi-cloud deployment strategy",
+      "How do you implement GitOps?",
+      "How do you manage infrastructure state?",
+      "Design an alerting system for production",
+      "How do you test infrastructure code?",
+      "How do you implement SLIs and SLOs?"
+    ]
+  },
+  "application_security": {
+    "title": "Application Security",
+    "subtopics": [
+      {
+        "name": "OWASP Top 10",
+        "details": [
+          "Injection attacks (SQL, NoSQL, LDAP)",
+          "Broken authentication",
+          "XSS (Cross-Site Scripting)",
+          "CSRF (Cross-Site Request Forgery)",
+          "Security misconfiguration",
+          "Sensitive data exposure",
+          "Security testing",
+          "Security awareness",
+          "Vulnerability management",
+          "Security scanning"
+        ]
+      },
+      {
+        "name": "Secure Coding",
+        "details": [
+          "Input validation",
+          "Output encoding",
+          "Parameterized queries",
+          "Principle of least privilege",
+          "Defense in depth",
+          "Secure API design",
+          "Authentication patterns",
+          "Authorization patterns",
+          "Security frameworks",
+          "Security libraries"
+        ]
+      },
+      {
+        "name": "Authentication & Authorization",
+        "details": [
+          "OAuth 2.0 flows",
+          "JWT best practices",
+          "SAML for enterprise SSO",
+          "Multi-factor authentication",
+          "RBAC vs ABAC",
+          "Identity providers",
+          "Session management",
+          "Token management",
+          "Permission systems",
+          "Access control models"
+        ]
+      },
+      {
+        "name": "API Security",
+        "details": [
+          "API key management",
+          "Rate limiting",
+          "Request signing",
+          "Certificate pinning",
+          "HTTPS/TLS configuration",
+          "API gateway security",
+          "Authentication for APIs",
+          "Authorization for APIs",
+          "API vulnerability scanning",
+          "API security monitoring"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How would you secure a public API?",
+      "Design an authentication system for a multi-tenant SaaS",
+      "How do you prevent credential leaks in microservices?",
+      "Explain how you'd implement zero-trust security",
+      "How do you prevent SQL injection?",
+      "How do you implement proper session management?",
+      "How do you secure JWT tokens?",
+      "How do you handle secrets in distributed systems?"
+    ]
+  },
+  "performance_engineering": {
+    "title": "Performance Engineering",
+    "subtopics": [
+      {
+        "name": "Application Profiling",
+        "details": [
+          "CPU profiling techniques",
+          "Memory leak detection",
+          "Thread contention analysis",
+          "Database query profiling",
+          "Network latency analysis",
+          "Application performance analysis",
+          "Performance bottlenecks",
+          "Load testing analysis",
+          "Profiling tools comparison",
+          "Performance data interpretation"
+        ]
+      },
+      {
+        "name": "Optimization Strategies",
+        "details": [
+          "Algorithm optimization",
+          "Data structure selection",
+          "Database indexing",
+          "Caching strategies",
+          "Connection pooling",
+          "Async/non-blocking I/O",
+          "Code optimization",
+          "Memory optimization",
+          "Network optimization",
+          "Database optimization"
+        ]
+      },
+      {
+        "name": "Scalability Testing",
+        "details": [
+          "Load testing (JMeter, Gatling)",
+          "Stress testing",
+          "Spike testing",
+          "Endurance testing",
+          "Bottleneck identification",
+          "Performance modeling",
+          "Capacity planning",
+          "Performance regression testing",
+          "Load testing scenarios",
+          "Performance test automation"
+        ]
+      },
+      {
+        "name": "Production Optimization",
+        "details": [
+          "JVM tuning",
+          "GC optimization",
+          "Thread pool sizing",
+          "Database query optimization",
+          "CDN configuration",
+          "Network optimization",
+          "Database connection tuning",
+          "Cache optimization",
+          "API response optimization",
+          "Resource utilization"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Your API latency increased from 100ms to 2s. Debug it.",
+      "How do you identify memory leaks in production?",
+      "Optimize a system handling 100K req/sec",
+      "Design a performance testing strategy",
+      "How do you optimize garbage collection?",
+      "How do you reduce database query time?",
+      "How do you optimize thread pool performance?",
+      "How do you implement circuit breakers to improve performance?"
+    ]
+  },
+  "technical_leadership": {
+    "title": "Technical Leadership",
+    "subtopics": [
+      {
+        "name": "Architecture Decision Records (ADRs)",
+        "details": [
+          "When to write ADRs",
+          "Template and structure",
+          "Trade-off analysis",
+          "Long-term thinking",
+          "ADR review process",
+          "ADR documentation",
+          "ADR lifecycle",
+          "ADR repositories",
+          "ADR communication",
+          "ADR impact assessment"
+        ]
+      },
+      {
+        "name": "Code Review Best Practices",
+        "details": [
+          "What to look for",
+          "Giving constructive feedback",
+          "Balancing speed vs quality",
+          "Automated checks vs manual review",
+          "Code review tools",
+          "Review process",
+          "Review metrics",
+          "Review efficiency",
+          "Review culture",
+          "Review automation"
+        ]
+      },
+      {
+        "name": "Technical Debt Management",
+        "details": [
+          "Identifying tech debt",
+          "Prioritizing refactoring",
+          "Boy Scout Rule",
+          "Deprecation strategies",
+          "Debt repayment strategies",
+          "Debt measurement",
+          "Debt communication",
+          "Balancing features and debt",
+          "Debt prevention",
+          "Debt tracking"
+        ]
+      },
+      {
+        "name": "Mentoring",
+        "details": [
+          "1-on-1 strategies",
+          "Career development",
+          "Knowledge sharing",
+          "Pairing and mob programming",
+          "Mentor-mentee relationships",
+          "Skill assessment",
+          "Learning paths",
+          "Feedback techniques",
+          "Mentoring programs",
+          "Mentoring effectiveness"
+        ]
+      },
+      {
+        "name": "Incident Management",
+        "details": [
+          "On-call responsibilities",
+          "Incident response",
+          "Post-mortem analysis",
+          "Blameless culture",
+          "Incident classification",
+          "Incident communication",
+          "Incident prevention",
+          "Incident response tools",
+          "Incident metrics",
+          "Incident learning"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Tell me about a time you disagreed with a senior engineer",
+      "How do you handle underperforming team members?",
+      "Describe your biggest technical failure",
+      "How do you balance feature delivery with tech debt?",
+      "Tell me about a time you had to make a difficult architectural decision",
+      "How do you conduct effective code reviews?",
+      "How do you identify and manage technical debt?",
+      "How do you mentor junior engineers?"
+    ]
+  },
+  "stakeholder_management": {
+    "title": "Stakeholder Management",
+    "subtopics": [
+      {
+        "name": "Communication",
+        "details": [
+          "Technical to non-technical translation",
+          "Status updates and reporting",
+          "Managing expectations",
+          "Saying "no" diplomatically",
+          "Communication channels",
+          "Communication frequency",
+          "Communication tools",
+          "Stakeholder mapping",
+          "Communication styles",
+          "Escalation paths"
+        ]
+      },
+      {
+        "name": "Estimation",
+        "details": [
+          "Story pointing",
+          "T-shirt sizing",
+          "Bottom-up vs top-down estimation",
+          "Handling estimation uncertainty",
+          "Buffer management",
+          "Estimation techniques",
+          "Estimation accuracy",
+          "Re-estimation",
+          "Estimation validation",
+          "Estimation tools"
+        ]
+      },
+      {
+        "name": "Risk Management",
+        "details": [
+          "Identifying technical risks",
+          "Risk mitigation strategies",
+          "Dependency management",
+          "Critical path analysis",
+          "Risk assessment",
+          "Risk communication",
+          "Risk monitoring",
+          "Contingency planning",
+          "Risk ownership",
+          "Risk documentation"
+        ]
+      },
+      {
+        "name": "Meeting Facilitation",
+        "details": [
+          "Running effective design reviews",
+          "Sprint planning",
+          "Retrospectives",
+          "Daily standups",
+          "Meeting structures",
+          "Meeting effectiveness",
+          "Meeting tools",
+          "Meeting facilitation techniques",
+          "Meeting follow-ups",
+          "Meeting productivity"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How do you handle competing priorities from multiple stakeholders?",
+      "Describe a time you had to deliver bad news to leadership",
+      "How do you influence without authority?",
+      "Tell me about a time you had to pivot on a technical decision",
+      "How do you set realistic expectations?",
+      "How do you run effective design reviews?",
+      "How do you handle estimation disagreements?",
+      "How do you manage risks in a project?"
+    ]
+  },
+  "machine_learning": {
+    "title": "Machine Learning for Engineers",
+    "subtopics": [
+      {
+        "name": "ML Fundamentals",
+        "details": [
+          "Supervised vs Unsupervised learning",
+          "Feature engineering",
+          "Model training and validation",
+          "Overfitting and underfitting",
+          "Cross-validation techniques",
+          "Model evaluation metrics",
+          "ML algorithms overview",
+          "Data preprocessing",
+          "ML workflow",
+          "Model selection"
+        ]
+      },
+      {
+        "name": "ML in Production",
+        "details": [
+          "Model serving (TensorFlow Serving, TorchServe)",
+          "A/B testing ML models",
+          "Model versioning",
+          "Feature stores",
+          "ML pipeline orchestration",
+          "Monitoring model drift",
+          "Model deployment",
+          "Model retraining",
+          "ML infrastructure",
+          "ML model lifecycle"
+        ]
+      },
+      {
+        "name": "Recommendation Systems",
+        "details": [
+          "Collaborative filtering",
+          "Content-based filtering",
+          "Hybrid approaches",
+          "Cold start problem",
+          "Real-time vs batch recommendations",
+          "Recommendation evaluation",
+          "Personalization",
+          "Scalability issues",
+          "Recommendation bias",
+          "Privacy considerations"
+        ]
+      },
+      {
+        "name": "NLP & Search",
+        "details": [
+          "Text preprocessing",
+          "Embeddings (Word2Vec, BERT)",
+          "Search relevance",
+          "Elasticsearch optimization",
+          "Information retrieval",
+          "Query processing",
+          "Search ranking",
+          "NLP techniques",
+          "Semantic search",
+          "Search personalization"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a recommendation system for YouTube",
+      "How would you deploy ML models at scale?",
+      "Design a search ranking system",
+      "How do you handle model versioning and rollback?",
+      "How do you prevent ML model bias?",
+      "How do you evaluate recommendation systems?",
+      "How do you implement feature stores?",
+      "How do you handle model drift?"
+    ]
+  },
+  "real_time_systems": {
+    "title": "Real-Time Systems & Streaming",
+    "subtopics": [
+      {
+        "name": "Stream Processing",
+        "details": [
+          "Kafka Streams",
+          "Apache Flink",
+          "Apache Storm",
+          "Spark Streaming",
+          "Windowing strategies",
+          "Stream processing patterns",
+          "Real-time aggregation",
+          "Stream processing scalability",
+          "Stream processing fault tolerance",
+          "Stream processing monitoring"
+        ]
+      },
+      {
+        "name": "Real-Time Analytics",
+        "details": [
+          "Time-series databases (InfluxDB, TimescaleDB)",
+          "Real-time aggregations",
+          "Hot/warm/cold data architecture",
+          "Data lake vs data warehouse",
+          "Real-time dashboarding",
+          "Real-time alerting",
+          "Event time processing",
+          "Real-time data quality",
+          "Real-time KPIs",
+          "Real-time monitoring"
+        ]
+      },
+      {
+        "name": "WebSocket & Server-Sent Events",
+        "details": [
+          "Connection management at scale",
+          "Heartbeat mechanisms",
+          "Reconnection strategies",
+          "Broadcasting to millions",
+          "WebSocket protocols",
+          "SSE vs WebSocket",
+          "Real-time messaging",
+          "Connection pooling",
+          "Real-time security",
+          "Scaling real-time connections"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a real-time dashboard for 1M concurrent users",
+      "How would you process 1M events/second with <1s latency?",
+      "Design a real-time fraud detection system",
+      "Build a live leaderboard for 100M users",
+      "How do you scale WebSocket connections?",
+      "How do you handle late-arriving data?",
+      "How do you ensure data consistency in real-time systems?",
+      "Design a system for real-time notifications"
+    ]
+  },
+  "data_engineering": {
+    "title": "Data Engineering & Big Data",
+    "subtopics": [
+      {
+        "name": "Batch Processing",
+        "details": [
+          "Apache Spark",
+          "MapReduce concepts",
+          "Data partitioning strategies",
+          "ETL vs ELT",
+          "Batch processing optimization",
+          "Data pipeline design",
+          "Batch processing frameworks",
+          "Data quality in batches",
+          "Batch processing monitoring",
+          "Batch processing scheduling"
+        ]
+      },
+      {
+        "name": "Data Warehousing",
+        "details": [
+          "Star schema vs Snowflake schema",
+          "Dimension tables and fact tables",
+          "Slowly Changing Dimensions (SCD)",
+          "Data modeling for OLAP",
+          "Data warehouse architecture",
+          "Data warehouse optimization",
+          "Data warehouse security",
+          "Data warehouse performance",
+          "Data warehouse monitoring",
+          "Data warehouse tools"
+        ]
+      },
+      {
+        "name": "Data Lake Architecture",
+        "details": [
+          "Bronze/Silver/Gold layers",
+          "Data governance",
+          "Data cataloging",
+          "Schema evolution",
+          "Data lake vs data warehouse",
+          "Data lake architecture patterns",
+          "Data lake security",
+          "Data lake monitoring",
+          "Data lake quality",
+          "Data lake compliance"
+        ]
+      },
+      {
+        "name": "Data Pipeline Orchestration",
+        "details": [
+          "Apache Airflow",
+          "Luigi",
+          "Prefect",
+          "DAG design patterns",
+          "Pipeline monitoring",
+          "Pipeline debugging",
+          "Pipeline scheduling",
+          "Pipeline reliability",
+          "Pipeline testing",
+          "Pipeline observability"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design a data pipeline processing 10TB daily",
+      "How would you handle late-arriving data?",
+      "Design a data lake architecture",
+      "How do you ensure data quality at scale?",
+      "How do you optimize ETL jobs?",
+      "How do you handle data lineage?",
+      "How do you implement data governance?",
+      "Design a pipeline for real-time data processing"
+    ]
+  },
+  "api_design": {
+    "title": "Mobile Backend & API Design",
+    "subtopics": [
+      {
+        "name": "RESTful API Best Practices",
+        "details": [
+          "Resource naming conventions",
+          "HTTP methods and status codes",
+          "Pagination strategies",
+          "API versioning (URI, Header, Accept header)",
+          "HATEOAS",
+          "Richardson Maturity Model",
+          "API design principles",
+          "API consistency",
+          "API documentation",
+          "API testing"
+        ]
+      },
+      {
+        "name": "GraphQL",
+        "details": [
+          "Schema design",
+          "Resolvers and DataLoaders",
+          "N+1 query problem",
+          "Batching and caching",
+          "GraphQL vs REST trade-offs",
+          "GraphQL subscriptions",
+          "GraphQL security",
+          "GraphQL performance",
+          "GraphQL tooling",
+          "GraphQL federation"
+        ]
+      },
+      {
+        "name": "gRPC",
+        "details": [
+          "Protocol Buffers",
+          "Streaming (unary, server, client, bidirectional)",
+          "Performance vs REST",
+          "When to use gRPC",
+          "gRPC service design",
+          "gRPC security",
+          "gRPC load balancing",
+          "gRPC monitoring",
+          "gRPC tooling",
+          "gRPC vs REST comparison"
+        ]
+      },
+      {
+        "name": "Mobile-Specific Considerations",
+        "details": [
+          "Offline-first design",
+          "Sync strategies",
+          "Push notifications at scale",
+          "CDN for mobile assets",
+          "API rate limiting for mobile",
+          "Reducing payload size",
+          "Mobile API security",
+          "Mobile network optimization",
+          "Mobile caching strategies",
+          "Mobile API performance"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design APIs for a mobile app with offline support",
+      "How would you handle API versioning for 100M mobile clients?",
+      "Design a push notification system for 500M users",
+      "GraphQL vs REST: when would you choose each?",
+      "How do you handle the N+1 problem in GraphQL?",
+      "How do you implement API rate limiting?",
+      "How do you optimize API responses for mobile?",
+      "How do you handle offline data synchronization?"
+    ]
+  },
+  "testing_strategies": {
+    "title": "Testing Strategies for Tech Leads",
+    "subtopics": [
+      {
+        "name": "Test Pyramid",
+        "details": [
+          "Unit tests (70%)",
+          "Integration tests (20%)",
+          "E2E tests (10%)",
+          "Contract tests",
+          "Test pyramid implementation",
+          "Test pyramid metrics",
+          "Test pyramid optimization",
+          "Test pyramid challenges",
+          "Test pyramid communication",
+          "Balancing test types"
+        ]
+      },
+      {
+        "name": "Advanced Testing",
+        "details": [
+          "Mutation testing",
+          "Property-based testing",
+          "Chaos engineering",
+          "Canary testing",
+          "Shadow traffic testing",
+          "Load testing strategies",
+          "Security testing",
+          "Performance testing",
+          "Testing in production",
+          "Exploratory testing"
+        ]
+      },
+      {
+        "name": "Test Automation",
+        "details": [
+          "CI/CD integration",
+          "Test parallelization",
+          "Flaky test management",
+          "Test data management",
+          "Test automation frameworks",
+          "Test automation maintenance",
+          "Test automation metrics",
+          "Test automation tools",
+          "Test automation ROI",
+          "Test automation governance"
+        ]
+      },
+      {
+        "name": "TDD & BDD",
+        "details": [
+          "Test-Driven Development practices",
+          "Behavior-Driven Development with Cucumber",
+          "When TDD makes sense",
+          "Mocking strategies",
+          "TDD in legacy code",
+          "BDD tools and frameworks",
+          "TDD vs BDD comparison",
+          "TDD team adoption",
+          "TDD performance impact",
+          "TDD and refactoring"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How do you test a distributed system?",
+      "Design a testing strategy for microservices",
+      "How would you handle flaky tests?",
+      "What's your approach to testing third-party integrations?",
+      "How do you implement chaos engineering?",
+      "How do you test for performance?",
+      "How do you manage test data?",
+      "How do you test in production safely?"
+    ]
+  },
+  "domain_driven_design": {
+    "title": "Domain-Driven Design (DDD)",
+    "subtopics": [
+      {
+        "name": "Strategic Design",
+        "details": [
+          "Bounded contexts",
+          "Context mapping",
+          "Ubiquitous language",
+          "Domain events",
+          "Subdomains (Core, Supporting, Generic)",
+          "Context mapping patterns",
+          "Strategic design principles",
+          "Context boundaries",
+          "Strategic design communication",
+          "Strategic design evolution"
+        ]
+      },
+      {
+        "name": "Tactical Design",
+        "details": [
+          "Entities and Value Objects",
+          "Aggregates and Aggregate Roots",
+          "Repositories",
+          "Domain Services",
+          "Application Services",
+          "Factories",
+          "Domain event patterns",
+          "Aggregate design principles",
+          "Tactical patterns implementation",
+          "DDD tactical tools"
+        ]
+      },
+      {
+        "name": "Event Storming",
+        "details": [
+          "Running event storming sessions",
+          "Identifying domain events",
+          "Command and event modeling",
+          "Aggregate design",
+          "Event storming outcomes",
+          "Event storming facilitation",
+          "Event storming analysis",
+          "Event storming tools",
+          "Event storming benefits",
+          "Event storming challenges"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How do you identify bounded contexts?",
+      "Design aggregates for an e-commerce system",
+      "When would you use DDD vs simple CRUD?",
+      "How do you handle cross-aggregate transactions?",
+      "How do you implement domain events?",
+      "What are the benefits of value objects?",
+      "How do you handle aggregate consistency?",
+      "How do you run an event storming session?"
+    ]
+  },
+  "platform_engineering": {
+    "title": "Platform Engineering",
+    "subtopics": [
+      {
+        "name": "Developer Experience",
+        "details": [
+          "Internal developer platforms",
+          "Golden paths and paved roads",
+          "Self-service infrastructure",
+          "Developer portals (Backstage)",
+          "Developer productivity metrics",
+          "Self-service tools",
+          "Developer workflow optimization",
+          "Platform success metrics",
+          "Developer feedback loops",
+          "Platform adoption strategies"
+        ]
+      },
+      {
+        "name": "Infrastructure Abstractions",
+        "details": [
+          "Platform-as-a-Service (PaaS)",
+          "Custom Kubernetes operators",
+          "Service catalogs",
+          "Templated deployments",
+          "Abstraction design principles",
+          "Platform extensibility",
+          "Infrastructure as code",
+          "Platform governance",
+          "Infrastructure standardization",
+          "Platform security"
+        ]
+      },
+      {
+        "name": "Developer Productivity",
+        "details": [
+          "Build time optimization",
+          "Test execution speed",
+          "Local development environment",
+          "Hot reload and fast feedback",
+          "Developer tooling",
+          "Local development patterns",
+          "Productivity measurement",
+          "Productivity improvement",
+          "Developer tool standardization",
+          "Developer environment management"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Design an internal platform for 500 engineers",
+      "How would you improve developer productivity by 50%?",
+      "Design a self-service deployment platform",
+      "How do you measure developer experience?",
+      "How do you implement a self-service catalog?",
+      "What are the key components of a developer platform?",
+      "How do you ensure platform security?",
+      "How do you drive platform adoption?"
+    ]
+  },
+  "cost_optimization": {
+    "title": "Cost Optimization & FinOps",
+    "subtopics": [
+      {
+        "name": "Cloud Cost Management",
+        "details": [
+          "Resource tagging strategies",
+          "Cost allocation",
+          "Reserved Instances vs Spot Instances",
+          "Right-sizing instances",
+          "Identifying waste",
+          "Cost management tools",
+          "Cost visibility",
+          "Cost optimization automation",
+          "Cloud billing",
+          "Cost governance"
+        ]
+      },
+      {
+        "name": "Application Efficiency",
+        "details": [
+          "Query optimization",
+          "Caching to reduce compute",
+          "Efficient data structures",
+          "Autoscaling strategies",
+          "Resource utilization",
+          "Performance optimization",
+          "Application architecture costs",
+          "Database cost optimization",
+          "Network cost optimization",
+          "Storage cost optimization"
+        ]
+      },
+      {
+        "name": "FinOps Practices",
+        "details": [
+          "Showback and chargeback",
+          "Budget alerts",
+          "Cost anomaly detection",
+          "Cost-aware architecture",
+          "FinOps team structure",
+          "Cost optimization culture",
+          "FinOps metrics",
+          "FinOps tools",
+          "FinOps reporting",
+          "FinOps best practices"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "Your AWS bill doubled. How do you investigate?",
+      "Design a cost-efficient architecture for a startup",
+      "How would you reduce infrastructure costs by 40%?",
+      "How do you implement showback/chargeback?",
+      "How do you optimize database costs?",
+      "How do you right-size compute resources?",
+      "How do you implement cost monitoring?",
+      "How do you build a cost optimization culture?"
+    ]
+  },
+  "faang_patterns": {
+    "title": "FAANG Interview Patterns",
+    "subtopics": [
+      {
+        "name": "Meta (Facebook) Interview Patterns",
+        "details": [
+          "System design at massive scale",
+          "Behavioral (Jedi interviewer style)",
+          "Production engineering mindset",
+          "Facebook's tech stack",
+          "Meta's culture and values",
+          "Meta interview format",
+          "Meta preparation strategies",
+          "Meta specific challenges",
+          "Meta technical bar",
+          "Meta system design focus"
+        ]
+      },
+      {
+        "name": "Google Interview Patterns",
+        "details": [
+          "Algorithms and data structures",
+          "System design depth",
+          "Code quality",
+          "Google's engineering culture",
+          "Googley-ness",
+          "Google interview process",
+          "Google preparation tips",
+          "Google technical challenges",
+          "Google behavioral focus",
+          "Google system design approach"
+        ]
+      },
+      {
+        "name": "Amazon Interview Patterns",
+        "details": [
+          "Leadership Principles",
+          "System design (AWS-heavy)",
+          "Behavioral (STAR method)",
+          "OOP design",
+          "Amazon's culture",
+          "Amazon interview process",
+          "Amazon LP questions",
+          "Amazon technical bar",
+          "Amazon system design focus",
+          "Amazon preparation strategies"
+        ]
+      },
+      {
+        "name": "Apple Interview Patterns",
+        "details": [
+          "Low-level systems",
+          "Performance optimization",
+          "Product thinking",
+          "Apple's engineering culture",
+          "Apple's interview style",
+          "Apple preparation approach",
+          "Apple technical challenges",
+          "Apple behavioral questions",
+          "Apple system design focus",
+          "Apple design principles"
+        ]
+      },
+      {
+        "name": "Netflix Interview Patterns",
+        "details": [
+          "Streaming at scale",
+          "A/B testing",
+          "Data-driven decisions",
+          "Netflix's tech stack",
+          "Netflix culture",
+          "Netflix interview process",
+          "Netflix preparation strategies",
+          "Netflix technical challenges",
+          "Netflix system design focus",
+          "Netflix innovation mindset"
+        ]
+      },
+      {
+        "name": "Other Top Tech Companies",
+        "details": [
+          "Microsoft interview patterns",
+          "Uber interview patterns",
+          "Airbnb interview patterns",
+          "LinkedIn interview patterns",
+          "Company-specific preparation",
+          "Interview process comparison",
+          "Cultural fit assessment",
+          "Technical bar variations",
+          "System design focus areas",
+          "Industry-specific challenges"
+        ]
+      }
+    ],
+    "faang_questions": [
+      "How does Meta's approach to system design differ from Google's?",
+      "What are the key differences in Amazon's Leadership Principles?",
+      "How do Apple's technical interviews compare to Google's?",
+      "What are Netflix's key technical challenges?",
+      "How do Microsoft's interviews differ from other FAANG companies?",
+      "How do you prepare for company-specific behavioral questions?",
+      "What technical skills are most valued at each company?",
+      "How do system design expectations differ across FAANG?"
+    ]
+  }
+}

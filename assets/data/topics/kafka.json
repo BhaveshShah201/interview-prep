@@ -1,0 +1,105 @@
+{
+  "title": "Kafka & Event Streaming",
+  "subtopics": [
+    {
+      "name": "Core Concepts",
+      "details": [
+        "Broker architecture",
+        "Partition leadership and ISR",
+        "Replication and fault tolerance",
+        "Consumer groups and rebalancing",
+        "Offset management",
+        "Topic and partition design",
+        "Kafka cluster architecture",
+        "Zookeeper vs KRaft mode",
+        "Kafka controller and coordinator",
+        "Message ordering guarantees"
+      ]
+    },
+    {
+      "name": "Performance Optimization",
+      "details": [
+        "Batch processing",
+        "Compression (gzip, snappy, lz4, zstd)",
+        "Producer acknowledgments",
+        "Consumer fetch strategies",
+        "Memory tuning",
+        "Partitioning strategies",
+        "Network configuration",
+        "JVM tuning for Kafka",
+        "Performance monitoring",
+        "Throughput vs latency trade-offs"
+      ]
+    },
+    {
+      "name": "Exactly-Once Semantics",
+      "details": [
+        "Idempotent producer",
+        "Transactional producer",
+        "Offset commit strategies",
+        "End-to-end exactly-once",
+        "Transaction coordinator",
+        "Producer and consumer synchronization",
+        "Duplicate handling",
+        "Transaction boundaries",
+        "Transactional guarantees",
+        "Performance impact of transactions"
+      ]
+    },
+    {
+      "name": "Kafka Streams",
+      "details": [
+        "Stateful vs stateless operations",
+        "Windowing operations",
+        "Joins (KStream-KStream, KStream-KTable)",
+        "State stores",
+        "Stream processing topologies",
+        "Reprocessing and reset tools",
+        "Interactive queries",
+        "Stream processing patterns",
+        "Kafka Streams vs KSQL",
+        "Kafka Streams vs Spark Streaming"
+      ]
+    },
+    {
+      "name": "Schema Evolution",
+      "details": [
+        "Avro schema registry",
+        "Backward/forward compatibility",
+        "Schema versioning",
+        "Schema validation",
+        "Schema evolution strategies",
+        "Confluent Schema Registry",
+        "Schema evolution testing",
+        "Breaking change detection",
+        "Schema management tools",
+        "Schema governance"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a Kafka architecture for processing 1 million events/sec",
+    "How do you handle duplicate messages in Kafka?",
+    "Explain how Kafka guarantees ordering",
+    "Design a CDC pipeline using Kafka Connect",
+    "How would you replay events from 3 months ago?",
+    "What's the difference between Kafka Streams and KSQL?",
+    "How do you handle schema evolution in Kafka?",
+    "Explain the trade-offs between different Kafka compression algorithms"
+  ],
+  "resources": {
+    "articles": [
+      "https://kafka.apache.org/documentation/",
+      "https://www.confluent.io/learn/kafka-101/",
+      "https://www.baeldung.com/kafka-get-started"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=Ch5VhJzaoaI",
+      "https://www.youtube.com/watch?v=QdNE-9Vd_2o"
+    ],
+    "practice_problems": [
+      "https://developer.confluent.io/learn-kafka/kafka-streams/hands-on/",
+      "https://www.udemy.com/course/apache-kafka/"
+    ]
+  }
+}

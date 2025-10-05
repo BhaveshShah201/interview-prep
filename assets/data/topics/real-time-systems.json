@@ -1,0 +1,75 @@
+{
+  "title": "Real-Time Systems & Streaming",
+  "subtopics": [
+    {
+      "name": "Stream Processing",
+      "details": [
+        "Kafka Streams",
+        "Apache Flink",
+        "Apache Storm",
+        "Spark Streaming",
+        "Windowing strategies",
+        "Stream processing patterns",
+        "Real-time aggregation",
+        "Stream processing scalability",
+        "Stream processing fault tolerance",
+        "Stream processing monitoring"
+      ]
+    },
+    {
+      "name": "Real-Time Analytics",
+      "details": [
+        "Time-series databases (InfluxDB, TimescaleDB)",
+        "Real-time aggregations",
+        "Hot/warm/cold data architecture",
+        "Data lake vs data warehouse",
+        "Real-time dashboarding",
+        "Real-time alerting",
+        "Event time processing",
+        "Real-time data quality",
+        "Real-time KPIs",
+        "Real-time monitoring"
+      ]
+    },
+    {
+      "name": "WebSocket & Server-Sent Events",
+      "details": [
+        "Connection management at scale",
+        "Heartbeat mechanisms",
+        "Reconnection strategies",
+        "Broadcasting to millions",
+        "WebSocket protocols",
+        "SSE vs WebSocket",
+        "Real-time messaging",
+        "Connection pooling",
+        "Real-time security",
+        "Scaling real-time connections"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a real-time dashboard for 1M concurrent users",
+    "How would you process 1M events/second with <1s latency?",
+    "Design a real-time fraud detection system",
+    "Build a live leaderboard for 100M users",
+    "How do you scale WebSocket connections?",
+    "How do you handle late-arriving data?",
+    "How do you ensure data consistency in real-time systems?",
+    "Design a system for real-time notifications"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.confluent.io/learn/real-time-systems/",
+      "https://www.datastax.com/guides/what-is-real-time-data-streaming",
+      "https://www.ibm.com/cloud/learn/real-time-data"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=cK_h-SjceM8",
+      "https://www.youtube.com/watch?v=Y-AZM2n_i88"
+    ],
+    "practice_problems": [
+      "https://www.educative.io/courses/grokking-the-system-design-interview",
+      "https://github.com/donnemartin/system-design-primer"
+    ]
+  }
+}

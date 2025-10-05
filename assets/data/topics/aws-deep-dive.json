@@ -1,0 +1,120 @@
+{
+  "title": "AWS Deep Dive",
+  "subtopics": [
+    {
+      "name": "Compute",
+      "details": [
+        "EC2 instance types and selection",
+        "Auto Scaling Groups",
+        "ECS vs EKS vs Fargate",
+        "Lambda functions and cold starts",
+        "Lambda layers and extensions",
+        "Lambda@Edge for CDN",
+        "Batch and serverless computing",
+        "Container orchestration",
+        "Compute optimization",
+        "Instance placement strategies"
+      ]
+    },
+    {
+      "name": "Storage",
+      "details": [
+        "S3 storage classes and lifecycle",
+        "EBS volume types",
+        "EFS for shared storage",
+        "Glacier for archival",
+        "Elastic Block Store optimization",
+        "Storage security",
+        "Cross-region replication",
+        "Storage cost optimization",
+        "Object storage patterns",
+        "File system comparison"
+      ]
+    },
+    {
+      "name": "Database",
+      "details": [
+        "RDS Multi-AZ vs Read Replicas",
+        "Aurora PostgreSQL/MySQL",
+        "DynamoDB design patterns",
+        "ElastiCache (Redis/Memcached)",
+        "Redshift for analytics",
+        "Database migration strategies",
+        "Database backup and recovery",
+        "Database monitoring",
+        "NoSQL vs SQL in AWS",
+        "Database scaling patterns"
+      ]
+    },
+    {
+      "name": "Networking",
+      "details": [
+        "VPC design and subnetting",
+        "Security Groups vs NACLs",
+        "VPC Peering and Transit Gateway",
+        "Direct Connect and VPN",
+        "Route 53 routing policies",
+        "CloudFront CDN",
+        "Network security",
+        "Network monitoring",
+        "Hybrid cloud networking",
+        "Network optimization"
+      ]
+    },
+    {
+      "name": "Monitoring & Operations",
+      "details": [
+        "CloudWatch metrics and logs",
+        "X-Ray for distributed tracing",
+        "CloudTrail for audit",
+        "Systems Manager",
+        "Cost optimization strategies",
+        "AWS Config and compliance",
+        "Operations automation",
+        "Event-driven operations",
+        "Infrastructure monitoring",
+        "Log analysis and alerts"
+      ]
+    },
+    {
+      "name": "Security",
+      "details": [
+        "IAM roles and policies",
+        "Secrets Manager",
+        "KMS for encryption",
+        "WAF and Shield for DDoS",
+        "GuardDuty for threat detection",
+        "Security compliance",
+        "Data encryption strategies",
+        "Security monitoring",
+        "Identity federation",
+        "Security best practices"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a multi-region, highly available architecture on AWS",
+    "How would you optimize AWS costs for a startup?",
+    "Design a serverless event-driven architecture",
+    "How do you ensure zero-downtime deployments?",
+    "Explain the differences between EBS volume types",
+    "How do you implement cross-region disaster recovery?",
+    "How do you secure data in transit and at rest?",
+    "Design a monitoring strategy for microservices on AWS"
+  ],
+  "resources": {
+    "articles": [
+      "https://aws.amazon.com/whitepapers/",
+      "https://aws.amazon.com/this-is-my-architecture/",
+      "https://aws.amazon.com/blogs/aws/"
+    ],
+    "videos": [
+      "https://www.youtube.com/c/amazonwebservices/playlists",
+      "https://www.youtube.com/playlist?list=PLhr1KZpdzukeiInD-tB3-3A44i2P3i4s-"
+    ],
+    "practice_problems": [
+      "https://github.com/acantril/learn-cantrill-io-labs",
+      "https://workshops.aws/"
+    ]
+  }
+}

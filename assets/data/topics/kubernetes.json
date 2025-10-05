@@ -1,0 +1,75 @@
+{
+  "title": "Kubernetes & Container Orchestration",
+  "subtopics": [
+    {
+      "name": "Core Concepts",
+      "details": [
+        "Pods, ReplicaSets, Deployments",
+        "Services (ClusterIP, NodePort, LoadBalancer)",
+        "Ingress controllers",
+        "ConfigMaps and Secrets",
+        "Persistent Volumes and Claims",
+        "StatefulSets for stateful apps",
+        "Kubernetes architecture",
+        "Control plane components",
+        "Node and cluster management",
+        "Container orchestration patterns"
+      ]
+    },
+    {
+      "name": "Advanced Topics",
+      "details": [
+        "DaemonSets and Jobs",
+        "HorizontalPodAutoscaler",
+        "Custom Resource Definitions (CRDs)",
+        "Operators",
+        "Helm charts",
+        "Service mesh (Istio, Linkerd)",
+        "Kubernetes networking",
+        "Storage management",
+        "Kubernetes APIs",
+        "Custom controllers"
+      ]
+    },
+    {
+      "name": "Production Patterns",
+      "details": [
+        "Blue-green deployments",
+        "Canary releases",
+        "Rolling updates",
+        "Resource limits and requests",
+        "Network policies",
+        "RBAC (Role-Based Access Control)",
+        "Pod Security Policies",
+        "Kubernetes monitoring",
+        "Cluster autoscaling",
+        "Production security"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a Kubernetes cluster for 100 microservices",
+    "How do you handle secrets in Kubernetes?",
+    "Explain how Kubernetes scheduling works",
+    "Design a CI/CD pipeline with Kubernetes",
+    "How do you implement blue-green deployment in Kubernetes?",
+    "How do you secure a Kubernetes cluster?",
+    "Explain the difference between Services and Ingress",
+    "How do you handle persistent storage in Kubernetes?"
+  ],
+  "resources": {
+    "articles": [
+      "https://kubernetes.io/docs/home/",
+      "https://www.redhat.com/en/topics/containers/what-is-kubernetes",
+      "https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=d6WC5n9G_sM",
+      "https://www.youtube.com/watch?v=7bA0gTroJjw"
+    ],
+    "practice_problems": [
+      "https://kubernetes.io/docs/tasks/",
+      "https://github.com/kubernetes/examples"
+    ]
+  }
+}

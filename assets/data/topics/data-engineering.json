@@ -1,0 +1,90 @@
+{
+  "title": "Data Engineering & Big Data",
+  "subtopics": [
+    {
+      "name": "Batch Processing",
+      "details": [
+        "Apache Spark",
+        "MapReduce concepts",
+        "Data partitioning strategies",
+        "ETL vs ELT",
+        "Batch processing optimization",
+        "Data pipeline design",
+        "Batch processing frameworks",
+        "Data quality in batches",
+        "Batch processing monitoring",
+        "Batch processing scheduling"
+      ]
+    },
+    {
+      "name": "Data Warehousing",
+      "details": [
+        "Star schema vs Snowflake schema",
+        "Dimension tables and fact tables",
+        "Slowly Changing Dimensions (SCD)",
+        "Data modeling for OLAP",
+        "Data warehouse architecture",
+        "Data warehouse optimization",
+        "Data warehouse security",
+        "Data warehouse performance",
+        "Data warehouse monitoring",
+        "Data warehouse tools"
+      ]
+    },
+    {
+      "name": "Data Lake Architecture",
+      "details": [
+        "Bronze/Silver/Gold layers",
+        "Data governance",
+        "Data cataloging",
+        "Schema evolution",
+        "Data lake vs data warehouse",
+        "Data lake architecture patterns",
+        "Data lake security",
+        "Data lake monitoring",
+        "Data lake quality",
+        "Data lake compliance"
+      ]
+    },
+    {
+      "name": "Data Pipeline Orchestration",
+      "details": [
+        "Apache Airflow",
+        "Luigi",
+        "Prefect",
+        "DAG design patterns",
+        "Pipeline monitoring",
+        "Pipeline debugging",
+        "Pipeline scheduling",
+        "Pipeline reliability",
+        "Pipeline testing",
+        "Pipeline observability"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a data pipeline processing 10TB daily",
+    "How would you handle late-arriving data?",
+    "Design a data lake architecture",
+    "How do you ensure data quality at scale?",
+    "How do you optimize ETL jobs?",
+    "How do you handle data lineage?",
+    "How do you implement data governance?",
+    "Design a pipeline for real-time data processing"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.ibm.com/cloud/learn/data-engineering",
+      "https://www.databricks.com/glossary/data-engineering",
+      "https://www.geeksforgeeks.org/data-engineering-roadmap/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=rxB1g8_Yc_I",
+      "https://www.youtube.com/watch?v=W_p22w6A1P8"
+    ],
+    "practice_problems": [
+      "https://github.com/DataEngineer-io/data-engineer-handbook",
+      "https://www.datacamp.com/tracks/data-engineer-with-python"
+    ]
+  }
+}

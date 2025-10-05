@@ -1,0 +1,105 @@
+{
+  "title": "Technical Leadership",
+  "subtopics": [
+    {
+      "name": "Architecture Decision Records (ADRs)",
+      "details": [
+        "When to write ADRs",
+        "Template and structure",
+        "Trade-off analysis",
+        "Long-term thinking",
+        "ADR review process",
+        "ADR documentation",
+        "ADR lifecycle",
+        "ADR repositories",
+        "ADR communication",
+        "ADR impact assessment"
+      ]
+    },
+    {
+      "name": "Code Review Best Practices",
+      "details": [
+        "What to look for",
+        "Giving constructive feedback",
+        "Balancing speed vs quality",
+        "Automated checks vs manual review",
+        "Code review tools",
+        "Review process",
+        "Review metrics",
+        "Review efficiency",
+        "Review culture",
+        "Review automation"
+      ]
+    },
+    {
+      "name": "Technical Debt Management",
+      "details": [
+        "Identifying tech debt",
+        "Prioritizing refactoring",
+        "Boy Scout Rule",
+        "Deprecation strategies",
+        "Debt repayment strategies",
+        "Debt measurement",
+        "Debt communication",
+        "Balancing features and debt",
+        "Debt prevention",
+        "Debt tracking"
+      ]
+    },
+    {
+      "name": "Mentoring",
+      "details": [
+        "1-on-1 strategies",
+        "Career development",
+        "Knowledge sharing",
+        "Pairing and mob programming",
+        "Mentor-mentee relationships",
+        "Skill assessment",
+        "Learning paths",
+        "Feedback techniques",
+        "Mentoring programs",
+        "Mentoring effectiveness"
+      ]
+    },
+    {
+      "name": "Incident Management",
+      "details": [
+        "On-call responsibilities",
+        "Incident response",
+        "Post-mortem analysis",
+        "Blameless culture",
+        "Incident classification",
+        "Incident communication",
+        "Incident prevention",
+        "Incident response tools",
+        "Incident metrics",
+        "Incident learning"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Tell me about a time you disagreed with a senior engineer",
+    "How do you handle underperforming team members?",
+    "Describe your biggest technical failure",
+    "How do you balance feature delivery with tech debt?",
+    "Tell me about a time you had to make a difficult architectural decision",
+    "How do you conduct effective code reviews?",
+    "How do you identify and manage technical debt?",
+    "How do you mentor junior engineers?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.abetterleader.com/articles/technical-leadership",
+      "https://leaddev.com/technical-leadership",
+      "https://martinfowler.com/articles/techLead.html"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=W_p22w6A1P8",
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q"
+    ],
+    "practice_problems": [
+      "https://www.manager-tools.com/podcasts/technical-leadership",
+      "https://www.coursera.org/specializations/leading-technical-teams"
+    ]
+  }
+}

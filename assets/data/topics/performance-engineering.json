@@ -1,0 +1,90 @@
+{
+  "title": "Performance Engineering",
+  "subtopics": [
+    {
+      "name": "Application Profiling",
+      "details": [
+        "CPU profiling techniques",
+        "Memory leak detection",
+        "Thread contention analysis",
+        "Database query profiling",
+        "Network latency analysis",
+        "Application performance analysis",
+        "Performance bottlenecks",
+        "Load testing analysis",
+        "Profiling tools comparison",
+        "Performance data interpretation"
+      ]
+    },
+    {
+      "name": "Optimization Strategies",
+      "details": [
+        "Algorithm optimization",
+        "Data structure selection",
+        "Database indexing",
+        "Caching strategies",
+        "Connection pooling",
+        "Async/non-blocking I/O",
+        "Code optimization",
+        "Memory optimization",
+        "Network optimization",
+        "Database optimization"
+      ]
+    },
+    {
+      "name": "Scalability Testing",
+      "details": [
+        "Load testing (JMeter, Gatling)",
+        "Stress testing",
+        "Spike testing",
+        "Endurance testing",
+        "Bottleneck identification",
+        "Performance modeling",
+        "Capacity planning",
+        "Performance regression testing",
+        "Load testing scenarios",
+        "Performance test automation"
+      ]
+    },
+    {
+      "name": "Production Optimization",
+      "details": [
+        "JVM tuning",
+        "GC optimization",
+        "Thread pool sizing",
+        "Database query optimization",
+        "CDN configuration",
+        "Network optimization",
+        "Database connection tuning",
+        "Cache optimization",
+        "API response optimization",
+        "Resource utilization"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Your API latency increased from 100ms to 2s. Debug it.",
+    "How do you identify memory leaks in production?",
+    "Optimize a system handling 100K req/sec",
+    "Design a performance testing strategy",
+    "How do you optimize garbage collection?",
+    "How do you reduce database query time?",
+    "How do you optimize thread pool performance?",
+    "How do you implement circuit breakers to improve performance?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.dynatrace.com/news/blog/what-is-performance-engineering/",
+      "https://www.blazemeter.com/blog/performance-engineering-guide",
+      "https://www.ibm.com/cloud/garage/architectures/performance-engineering-practices"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q",
+      "https://www.youtube.com/watch?v=J_sK_0-2RMA"
+    ],
+    "practice_problems": [
+      "https://www.udemy.com/course/java-performance-tuning-and-optimization/",
+      "https://www.coursera.org/courses?query=performance%20engineering"
+    ]
+  }
+}

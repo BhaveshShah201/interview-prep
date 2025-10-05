@@ -1,0 +1,90 @@
+{
+  "title": "Distributed Systems Patterns",
+  "subtopics": [
+    {
+      "name": "Resilience Patterns",
+      "details": [
+        "Circuit Breaker (Hystrix, Resilience4j)",
+        "Bulkhead (isolating resources)",
+        "Retry with exponential backoff",
+        "Timeout patterns",
+        "Fallback strategies",
+        "Health checks and heartbeats",
+        "Rate limiting and throttling",
+        "Circuit breaker state transitions",
+        "Bulkhead isolation strategies",
+        "Resilience patterns in microservices"
+      ]
+    },
+    {
+      "name": "Data Patterns",
+      "details": [
+        "Saga pattern (Choreography vs Orchestration)",
+        "Event Sourcing",
+        "CQRS (Command Query Responsibility Segregation)",
+        "Outbox pattern for reliable messaging",
+        "Change Data Capture (CDC)",
+        "Two-Phase Commit (2PC)",
+        "Three-Phase Commit (3PC)",
+        "Event-driven architecture patterns",
+        "Data consistency models",
+        "Distributed data patterns trade-offs"
+      ]
+    },
+    {
+      "name": "Service Communication",
+      "details": [
+        "API Gateway pattern",
+        "Backend for Frontend (BFF)",
+        "Service Mesh (Istio, Linkerd)",
+        "Sidecar pattern",
+        "Ambassador pattern",
+        "Anti-corruption layer",
+        "API versioning strategies",
+        "Service communication protocols",
+        "Asynchronous vs synchronous communication",
+        "Service discovery and load balancing"
+      ]
+    },
+    {
+      "name": "Deployment Patterns",
+      "details": [
+        "Blue-Green deployment",
+        "Canary releases",
+        "Feature toggles/flags",
+        "Strangler Fig pattern",
+        "Database-per-service",
+        "Shared database anti-pattern",
+        "Deployment pipeline patterns",
+        "Zero-downtime deployment strategies",
+        "Rollback and recovery patterns",
+        "Immutable infrastructure patterns"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a distributed transaction system without 2PC",
+    "How would you implement Saga pattern for order processing?",
+    "Explain when Circuit Breaker should trip and recover",
+    "Design an event sourcing system for banking transactions",
+    "What's the difference between Saga choreography and orchestration?",
+    "How do you implement eventual consistency in distributed systems?",
+    "Explain the trade-offs of service mesh vs traditional API gateways",
+    "Design a feature flag system for global rollout"
+  ],
+  "resources": {
+    "articles": [
+      "https://aws.amazon.com/blogs/architecture/common-design-patterns-for-distributed-systems/",
+      "https://microservices.io/patterns/index.html",
+      "https://www.gocloudgurus.com/blog/distributed-system-design-patterns/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=cK_h-SjceM8",
+      "https://www.youtube.com/watch?v=Y-AZM2n_i88"
+    ],
+    "practice_problems": [
+      "https://www.educative.io/courses/grokking-the-system-design-interview",
+      "https://github.com/donnemartin/system-design-primer"
+    ]
+  }
+}

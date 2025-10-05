@@ -1,0 +1,90 @@
+{
+  "title": "FAANG Interview Patterns",
+  "subtopics": [
+    {
+      "name": "Meta Interview Patterns",
+      "details": [
+        "Coding challenges (LeetCode Medium/Hard)",
+        "System design (scalable, distributed systems)",
+        "Behavioral questions (leadership, collaboration, impact)",
+        "Product sense (for product-focused roles)",
+        "Deep dive into past projects"
+      ]
+    },
+    {
+      "name": "Google Interview Patterns",
+      "details": [
+        "Coding challenges (algorithmic, data structures)",
+        "System design (large-scale, complex systems)",
+        "Behavioral questions (Googleyness, leadership, ambiguity)",
+        "Googliness and leadership principles",
+        "Distributed systems concepts"
+      ]
+    },
+    {
+      "name": "Amazon Interview Patterns",
+      "details": [
+        "Coding challenges (data structures, algorithms)",
+        "System design (scalable, fault-tolerant systems)",
+        "Leadership Principles (16 principles)",
+        "Behavioral questions (STAR method)",
+        "Object-oriented design"
+      ]
+    },
+    {
+      "name": "Apple Interview Patterns",
+      "details": [
+        "Coding challenges (performance-critical, memory-efficient)",
+        "System design (user experience, privacy, integration)",
+        "Behavioral questions (passion, attention to detail, collaboration)",
+        "Deep dive into past projects and technical decisions",
+        "Problem-solving and debugging skills"
+      ]
+    },
+    {
+      "name": "Netflix Interview Patterns",
+      "details": [
+        "Coding challenges (distributed systems, concurrency)",
+        "System design (high-throughput, low-latency streaming)",
+        "Culture (freedom & responsibility, high performance)",
+        "Behavioral questions (autonomy, impact, candid feedback)",
+        "Cloud-native architecture (AWS focus)"
+      ]
+    },
+    {
+      "name": "Other Top Tech Companies",
+      "details": [
+        "Company-specific values and culture",
+        "Tailored coding and system design challenges",
+        "Emphasis on specific technologies or domains",
+        "Behavioral questions aligned with company principles",
+        "Open-source contributions and personal projects"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Describe a time you had to make a difficult technical decision with incomplete information.",
+    "Tell me about a project you led that failed. What did you learn?",
+    "How do you handle disagreements with team members or stakeholders?",
+    "Design a system to detect and prevent fraud in real-time.",
+    "Explain a complex technical concept to a non-technical audience.",
+    "How do you prioritize technical debt against new feature development?",
+    "Describe a time you mentored a junior engineer. What was the outcome?",
+    "How do you stay up-to-date with new technologies and industry trends?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.interviewkickstart.com/interview-questions/faang-interview-questions",
+      "https://www.educative.io/blog/faang-interview-preparation-guide",
+      "https://www.freecodecamp.org/news/how-to-get-a-faang-job/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=W_p22w6A1P8",
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/problemset/all/",
+      "https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Domain-Driven Design (DDD)",
+  "subtopics": [
+    {
+      "name": "Strategic Design",
+      "details": [
+        "Bounded Contexts",
+        "Ubiquitous Language",
+        "Context Mapping",
+        "Subdomains (Core, Supporting, Generic)",
+        "Domain Vision Statement",
+        "Event Storming for strategic discovery",
+        "Big Ball of Mud anti-pattern",
+        "Strategic alignment with business goals",
+        "Decomposition strategies",
+        "Organizational alignment"
+      ]
+    },
+    {
+      "name": "Tactical Design",
+      "details": [
+        "Entities",
+        "Value Objects",
+        "Aggregates and Aggregate Roots",
+        "Domain Services",
+        "Domain Events",
+        "Repositories",
+        "Factories",
+        "Modules",
+        "Specifications",
+        "Anti-Corruption Layer"
+      ]
+    },
+    {
+      "name": "Event Storming",
+      "details": [
+        "Facilitation techniques",
+        "Identifying domain events",
+        "Command identification",
+        "Aggregates and Read Models",
+        "Hotspots and pain points",
+        "Process modeling",
+        "Bounded Context discovery",
+        "Collaborative modeling",
+        "Event-driven architecture design",
+        "Value stream mapping"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "How would you apply DDD principles to design a new feature for a large-scale e-commerce platform?",
+    "Explain the concept of Bounded Contexts and provide a real-world example.",
+    "When would you choose to use an Aggregate in your domain model, and what are its responsibilities?",
+    "How do Domain Events contribute to a loosely coupled and scalable system?",
+    "Describe a scenario where an Anti-Corruption Layer would be beneficial.",
+    "What are the trade-offs of implementing a rich domain model versus an anemic domain model?",
+    "How would you use Event Storming to kickstart a new project or refactor an existing one?",
+    "Discuss the challenges and benefits of adopting DDD in a microservices architecture."
+  ],
+  "resources": {
+    "articles": [
+      "https://martinfowler.com/bliki/DomainDrivenDesign.html",
+      "https://www.infoq.com/minibooks/domain-driven-design-quickly/",
+      "https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=ddd-video-link-1",
+      "https://www.youtube.com/watch?v=ddd-video-link-2"
+    ],
+    "practice_problems": [
+      "https://github.com/ddd-crew/ddd-by-example",
+      "https://www.udemy.com/course/domain-driven-design-in-practice/"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "title": "Testing Strategies for Tech Leads",
+  "subtopics": [
+    {
+      "name": "Test Pyramid",
+      "details": [
+        "Unit tests (70%)",
+        "Integration tests (20%)",
+        "E2E tests (10%)",
+        "Contract tests",
+        "Test pyramid implementation",
+        "Test pyramid metrics",
+        "Test pyramid optimization",
+        "Test pyramid challenges",
+        "Test pyramid communication",
+        "Balancing test types"
+      ]
+    },
+    {
+      "name": "Advanced Testing",
+      "details": [
+        "Mutation testing",
+        "Property-based testing",
+        "Chaos engineering",
+        "Canary testing",
+        "Shadow traffic testing",
+        "Load testing strategies",
+        "Security testing",
+        "Performance testing",
+        "Testing in production",
+        "Exploratory testing"
+      ]
+    },
+    {
+      "name": "Test Automation",
+      "details": [
+        "CI/CD integration",
+        "Test parallelization",
+        "Flaky test management",
+        "Test data management",
+        "Test automation frameworks",
+        "Test automation maintenance",
+        "Test automation metrics",
+        "Test automation tools",
+        "Test automation ROI",
+        "Test automation governance"
+      ]
+    },
+    {
+      "name": "TDD & BDD",
+      "details": [
+        "Test-Driven Development practices",
+        "Behavior-Driven Development with Cucumber",
+        "When TDD makes sense",
+        "Mocking strategies",
+        "TDD in legacy code",
+        "BDD tools and frameworks",
+        "TDD vs BDD comparison",
+        "TDD team adoption",
+        "TDD performance impact",
+        "TDD and refactoring"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "How do you test a distributed system?",
+    "Design a testing strategy for microservices",
+    "How would you handle flaky tests?",
+    "What's your approach to testing third-party integrations?",
+    "How do you implement chaos engineering?",
+    "How do you test for performance?",
+    "How do you manage test data?",
+    "How do you test in production safely?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.browserstack.com/guide/testing-strategies",
+      "https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing",
+      "https://www.techtarget.com/searchsoftwarequality/definition/test-strategy"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=gr_00000000",
+      "https://www.youtube.com/watch?v=W_p22w6A1P8"
+    ],
+    "practice_problems": [
+      "https://www.guru99.com/software-testing-interview-questions.html",
+      "https://www.javatpoint.com/software-testing-interview-questions"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Spring Boot Production Patterns",
+  "subtopics": [
+    {
+      "name": "Monitoring & Observability",
+      "details": [
+        "Custom Actuator endpoints",
+        "Micrometer metrics",
+        "Distributed tracing (Sleuth, Zipkin, Jaeger)",
+        "Prometheus integration",
+        "Grafana dashboards",
+        "Custom health indicators",
+        "Logback configuration and log levels",
+        "Application performance monitoring",
+        "Tracing request flows",
+        "Observability best practices"
+      ]
+    },
+    {
+      "name": "Security",
+      "details": [
+        "OAuth 2.0 / OpenID Connect",
+        "JWT implementation and validation",
+        "Method-level security",
+        "CSRF protection",
+        "CORS configuration",
+        "Security headers",
+        "Rate limiting",
+        "Authentication vs authorization",
+        "Security configuration patterns",
+        "Secure coding practices"
+      ]
+    },
+    {
+      "name": "Testing Strategies",
+      "details": [
+        "Integration testing with Testcontainers",
+        "Mocking external services (WireMock)",
+        "Contract testing (Spring Cloud Contract)",
+        "Performance testing",
+        "Chaos engineering",
+        "Test-driven development with Spring",
+        "Spring test slices",
+        "MockMvc and WebTestClient",
+        "Test data management",
+        "End-to-end testing strategies"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a zero-downtime deployment strategy for Spring Boot",
+    "How would you implement distributed tracing across 50 microservices?",
+    "Design a multi-tenant application with Spring Boot",
+    "How do you secure Spring Boot applications?",
+    "Explain the difference between @MockBean and @SpyBean",
+    "How do you implement custom actuator endpoints?",
+    "What are the best practices for Spring Boot testing?",
+    "How do you handle database migrations in Spring Boot?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.baeldung.com/spring-boot-production-best-practices",
+      "https://stackify.com/spring-boot-best-practices/",
+      "https://www.techgeeknext.com/spring-boot/spring-boot-best-practices"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=L0g_I-qXj6o",
+      "https://www.youtube.com/watch?v=madsyY4aK3U"
+    ],
+    "practice_problems": [
+      "https://github.com/spring-projects/spring-petclinic",
+      "https://www.baeldung.com/spring-boot-testing"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+
+{
+  "title": "JVM Internals & Performance Engineering",
+  "subtopics": [
+    {
+      "name": "Class Loading Mechanism",
+      "details": [
+        "Bootstrap, Extension, Application class loaders",
+        "Custom class loaders and class loading delegation",
+        "Runtime class generation (ASM, Byte Buddy, Javassist)",
+        "ClassLoader memory leaks in application servers",
+        "Parent delegation model and its implications",
+        "Class loading in application servers like Tomcat and JBoss",
+        "OSGi and dynamic module loading",
+        "JNI and native library loading",
+        "Security considerations in class loading",
+        "Hotswap and dynamic class reloading"
+      ]
+    },
+    {
+      "name": "JIT Compilation",
+      "details": [
+        "C1 (Client) vs C2 (Server) compilers",
+        "Tiered compilation strategies",
+        "Code cache management",
+        "Deoptimization and OSR (On-Stack Replacement)",
+        "Graal VM and AOT compilation",
+        "Method inlining and escape analysis",
+        "Profile-guided optimization",
+        "Compilation thresholds and tuning",
+        "Compiler directives and C2 settings",
+        "Performance impact of JIT compilation phases"
+      ]
+    },
+    {
+      "name": "Garbage Collection Deep Dive",
+      "details": [
+        "Serial, Parallel, CMS, G1GC, ZGC, Shenandoah",
+        "GC tuning for low-latency systems",
+        "Generational hypothesis and GC algorithms",
+        "Concurrent mark-sweep patterns",
+        "G1GC region-based collection",
+        "ZGC sub-millisecond pauses",
+        "GC logs analysis and troubleshooting",
+        "GC overhead and allocation rate considerations",
+        "Metaspace and permanent generation management",
+        "GC ergonomics and adaptive sizing"
+      ]
+    },
+    {
+      "name": "Memory Management",
+      "details": [
+        "Heap structure (Young Gen, Old Gen, Metaspace)",
+        "Stack vs Heap allocation",
+        "Escape analysis and scalar replacement",
+        "Object header and memory layout",
+        "Compressed OOPs",
+        "Native memory tracking",
+        "Memory leaks: detection and resolution",
+        "Off-heap memory (Direct ByteBuffer, Unsafe)",
+        "Memory profiling tools and techniques",
+        "Direct vs heap memory trade-offs"
+      ]
+    },
+    {
+      "name": "Performance Profiling",
+      "details": [
+        "JFR (Java Flight Recorder) and JMC",
+        "Async-profiler, YourKit, JProfiler",
+        "Flame graphs interpretation",
+        "Thread dump analysis",
+        "Heap dump analysis (MAT, VisualVM)",
+        "CPU vs Memory profiling strategies",
+        "Performance bottleneck identification",
+        "Sampling vs instrumentation profiling",
+        "Production profiling best practices",
+        "Performance regression testing"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Explain how G1GC handles large heaps differently from CMS",
+    "Your service has memory leaks in production. Walk me through your debugging approach",
+    "Design a custom class loader for plugin architecture",
+    "How would you optimize GC pauses for a 100GB heap?",
+    "Explain the trade-offs between different garbage collectors for a high-throughput system",
+    "How does escape analysis optimize memory allocation?",
+    "What happens during a full GC and how can you minimize it?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.oracle.com/java/technologies/javase/javase-tech-vm.html",
+      "https://www.baeldung.com/jvm-garbage-collectors",
+      "https://www.baeldung.com/java-memory-management-interview-questions"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=VMu-Yswp3kY",
+      "https://www.youtube.com/watch?v=7P0nL5E-rC8"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/discuss/interview-question/system-design/498985/Design-a-garbage-collector",
+      "https://www.codewars.com/kata/55b75fcf67e558d3750000a3"
+    ]
+  }
+}

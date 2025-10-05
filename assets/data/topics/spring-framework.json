@@ -1,0 +1,106 @@
+{
+  "title": "Spring Framework Deep Dive",
+  "subtopics": [
+    {
+      "name": "IoC Container Internals",
+      "details": [
+        "BeanFactory vs ApplicationContext",
+        "Bean lifecycle (11 phases)",
+        "BeanPostProcessor and BeanFactoryPostProcessor",
+        "Circular dependency resolution",
+        "Custom scope implementation",
+        "Lazy initialization strategies",
+        "Bean definition and registration",
+        "Dependency injection mechanisms",
+        "Bean factory post-processing",
+        "Container lifecycle management"
+      ]
+    },
+    {
+      "name": "AOP (Aspect-Oriented Programming)",
+      "details": [
+        "JDK Dynamic Proxy vs CGLIB",
+        "AspectJ weaving (compile-time, load-time)",
+        "Pointcut expressions",
+        "Around advice performance",
+        "AOP limitations and workarounds",
+        "Introduction and inter-type declarations",
+        "AOP proxy mechanisms",
+        "Performance impact of AOP",
+        "AOP weaving strategies",
+        "CGLIB proxy limitations"
+      ]
+    },
+    {
+      "name": "Transaction Management",
+      "details": [
+        "Programmatic vs Declarative",
+        "Propagation levels (7 types)",
+        "Isolation levels and their impact",
+        "Read-only optimization",
+        "Transaction rollback rules",
+        "Distributed transactions with XA",
+        "Transaction synchronization",
+        "Transaction manager configuration",
+        "Isolation level trade-offs",
+        "Transaction performance considerations"
+      ]
+    },
+    {
+      "name": "Spring Boot Internals",
+      "details": [
+        "Auto-configuration mechanism",
+        "Conditional annotations",
+        "Starter dependencies design",
+        "Embedded server configuration",
+        "Actuator endpoints customization",
+        "Spring Boot vs Spring Cloud",
+        "Spring Boot startup sequence",
+        "Application context hierarchy",
+        "Environment and property sources",
+        "Spring Boot externalized configuration"
+      ]
+    },
+    {
+      "name": "Performance Optimization",
+      "details": [
+        "Bean creation overhead",
+        "Lazy loading strategies",
+        "Connection pool tuning (HikariCP)",
+        "Caching strategies",
+        "Async processing (@Async)",
+        "Spring AOP performance tuning",
+        "Component scanning optimization",
+        "Spring Data JPA tuning",
+        "Memory management in Spring apps",
+        "Spring Boot startup time optimization"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Why does @Transactional not work on private methods?",
+    "Design a custom Spring Boot starter",
+    "How would you debug circular dependency issues?",
+    "Explain how Spring resolves beans when multiple candidates exist",
+    "What happens if a transaction method calls another @Transactional method in the same class?",
+    "How does Spring implement method-level security?",
+    "Explain the difference between @Component, @Service, @Repository",
+    "How do you customize Spring Boot auto-configuration?",
+    "What are the performance implications of Spring AOP?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.marcobehler.com/guides/spring-framework",
+      "https://www.baeldung.com/spring-framework-guide",
+      "https://spring.io/guides"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=Fe9a-Jk_2tA",
+      "https://www.youtube.com/watch?v=5P8i-j2oK4s"
+    ],
+    "practice_problems": [
+      "https://www.baeldung.com/spring-interview-questions",
+      "https://github.com/spring-projects/spring-petclinic"
+    ]
+  }
+}

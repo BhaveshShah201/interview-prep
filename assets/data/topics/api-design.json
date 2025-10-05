@@ -1,0 +1,90 @@
+{
+  "title": "Mobile Backend & API Design",
+  "subtopics": [
+    {
+      "name": "RESTful API Best Practices",
+      "details": [
+        "Resource naming conventions",
+        "HTTP methods and status codes",
+        "Pagination strategies",
+        "API versioning (URI, Header, Accept header)",
+        "HATEOAS",
+        "Richardson Maturity Model",
+        "API design principles",
+        "API consistency",
+        "API documentation",
+        "API testing"
+      ]
+    },
+    {
+      "name": "GraphQL",
+      "details": [
+        "Schema design",
+        "Resolvers and DataLoaders",
+        "N+1 query problem",
+        "Batching and caching",
+        "GraphQL vs REST trade-offs",
+        "GraphQL subscriptions",
+        "GraphQL security",
+        "GraphQL performance",
+        "GraphQL tooling",
+        "GraphQL federation"
+      ]
+    },
+    {
+      "name": "gRPC",
+      "details": [
+        "Protocol Buffers",
+        "Streaming (unary, server, client, bidirectional)",
+        "Performance vs REST",
+        "When to use gRPC",
+        "gRPC service design",
+        "gRPC security",
+        "gRPC load balancing",
+        "gRPC monitoring",
+        "gRPC tooling",
+        "gRPC vs REST comparison"
+      ]
+    },
+    {
+      "name": "Mobile-Specific Considerations",
+      "details": [
+        "Offline-first design",
+        "Sync strategies",
+        "Push notifications at scale",
+        "CDN for mobile assets",
+        "API rate limiting for mobile",
+        "Reducing payload size",
+        "Mobile API security",
+        "Mobile network optimization",
+        "Mobile caching strategies",
+        "Mobile API performance"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design APIs for a mobile app with offline support",
+    "How would you handle API versioning for 100M mobile clients?",
+    "Design a push notification system for 500M users",
+    "GraphQL vs REST: when would you choose each?",
+    "How do you handle the N+1 problem in GraphQL?",
+    "How do you implement API rate limiting?",
+    "How do you optimize API responses for mobile?",
+    "How do you handle offline data synchronization?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.smashingmagazine.com/2018/01/mobile-api-design-best-practices/",
+      "https://www.freecodecamp.org/news/rest-api-design-best-practices-for-developers/",
+      "https://aws.amazon.com/api-gateway/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=W_p22w6A1P8",
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q"
+    ],
+    "practice_problems": [
+      "https://www.educative.io/courses/grokking-the-system-design-interview",
+      "https://github.com/donnemartin/system-design-primer"
+    ]
+  }
+}

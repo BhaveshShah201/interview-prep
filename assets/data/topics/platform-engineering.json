@@ -1,0 +1,75 @@
+{
+  "title": "Platform Engineering",
+  "subtopics": [
+    {
+      "name": "Developer Experience",
+      "details": [
+        "Internal Developer Platforms (IDP)",
+        "Self-service capabilities",
+        "Golden Paths",
+        "Reducing cognitive load",
+        "Developer portals (Backstage, Port)",
+        "Automating repetitive tasks",
+        "Fast feedback loops",
+        "Standardized workflows",
+        "Toolchain integration",
+        "On-demand environments"
+      ]
+    },
+    {
+      "name": "Infrastructure Abstractions",
+      "details": [
+        "Infrastructure as Code (IaC) (Terraform, Crossplane)",
+        "Kubernetes as a platform foundation",
+        "Containerization (Docker)",
+        "Managed services vs self-hosted",
+        "Cloud-native patterns",
+        "Abstraction layers for complexity management",
+        "API-driven infrastructure",
+        "Policy as Code",
+        "GitOps for infrastructure",
+        "Service mesh integration"
+      ]
+    },
+    {
+      "name": "Developer Productivity",
+      "details": [
+        "CI/CD pipeline optimization",
+        "Automated testing and quality gates",
+        "Observability and monitoring integration",
+        "Cost optimization for development resources",
+        "Security automation",
+        "Knowledge sharing and documentation",
+        "Feedback mechanisms for platform improvement",
+        "Metrics for developer productivity",
+        "Incident management for platform services",
+        "Chaos engineering for platform resilience"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design an Internal Developer Platform (IDP) for a large enterprise.",
+    "How would you measure the success and adoption of a platform engineering initiative?",
+    "Explain the relationship between Platform Engineering and DevOps.",
+    "How do you balance standardization with developer flexibility in a platform?",
+    "Design a 'golden path' for deploying a new microservice on your platform.",
+    "How would you handle multi-cloud infrastructure within a platform engineering context?",
+    "What are the key challenges in building and maintaining an IDP?",
+    "How do you ensure the security and compliance of your platform and the applications running on it?"
+  ],
+  "resources": {
+    "articles": [
+      "https://platformengineering.org/blog/what-is-platform-engineering",
+      "https://www.atlassian.com/devops/devops-tools/platform-engineering",
+      "https://www.redhat.com/en/topics/devops/what-is-platform-engineering"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=W_p22w6A1P8",
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q"
+    ],
+    "practice_problems": [
+      "https://github.com/platform-engineering-community/awesome-platform-engineering",
+      "https://www.cncf.io/certification/kcna/"
+    ]
+  }
+}

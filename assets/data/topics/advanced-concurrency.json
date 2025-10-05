@@ -1,0 +1,121 @@
+{
+  "title": "Advanced Concurrency & Multithreading",
+  "subtopics": [
+    {
+      "name": "Java Memory Model (JMM)",
+      "details": [
+        "Happens-before relationship",
+        "Memory visibility and ordering",
+        "Volatile semantics and memory barriers",
+        "Final field semantics",
+        "Safe publication idioms",
+        "Sequential consistency vs. relaxed consistency",
+        "Memory model implementation in different architectures",
+        "Double-checked locking and JMM guarantees",
+        "Atomic operations and memory effects",
+        "JMM impact on performance"
+      ]
+    },
+    {
+      "name": "Advanced Synchronization",
+      "details": [
+        "Lock-free algorithms (CAS operations)",
+        "ABA problem and solutions",
+        "StampedLock for optimistic reads",
+        "Phaser for complex synchronization",
+        "LongAdder vs AtomicLong performance",
+        "ReentrantLock features and condition variables",
+        "ReadWriteLock and performance considerations",
+        "ForkJoinPool and work-stealing algorithm",
+        "Structured locking patterns",
+        "Deadlock prevention and detection"
+      ]
+    },
+    {
+      "name": "Concurrent Data Structures",
+      "details": [
+        "ConcurrentHashMap internals (segment locking)",
+        "CopyOnWriteArrayList use cases",
+        "ConcurrentSkipListMap",
+        "Lock-free queues (ConcurrentLinkedQueue)",
+        "BlockingQueue implementations",
+        "Thread-safe collections performance comparison",
+        "Non-blocking algorithms and design patterns",
+        "Wait-free and lock-free data structures",
+        "Memory consistency and visibility in concurrent collections",
+        "Scalability characteristics of different structures"
+      ]
+    },
+    {
+      "name": "Thread Pool Deep Dive",
+      "details": [
+        "ThreadPoolExecutor internals",
+        "Fork/Join framework and work-stealing",
+        "Custom ThreadPoolExecutor configurations",
+        "Thread pool sizing strategies",
+        "Rejection policies",
+        "ThreadFactory customization",
+        "ExecutorService lifecycle management",
+        "Performance tuning of thread pools",
+        "Virtual threads integration (Project Loom)",
+        "Thread pool monitoring and metrics"
+      ]
+    },
+    {
+      "name": "Reactive Programming",
+      "details": [
+        "Project Reactor fundamentals",
+        "Backpressure handling",
+        "Reactive Streams specification",
+        "WebFlux internals",
+        "Virtual Threads (Project Loom - Java 21)",
+        "Reactive vs imperative performance trade-offs",
+        "Error handling in reactive streams",
+        "Schedulers and thread management",
+        "Reactive patterns for microservices",
+        "Flow control and buffering strategies"
+      ]
+    },
+    {
+      "name": "Concurrency Patterns",
+      "details": [
+        "Double-checked locking (DCL) pitfalls",
+        "Thread-safe Singleton patterns",
+        "Producer-Consumer pattern",
+        "Readers-Writers problem",
+        "Dining Philosophers problem",
+        "Active Object pattern",
+        "Monitor Object pattern",
+        "Leader-Follower pattern",
+        "Thread Pool pattern",
+        "Half-Sync/Half-Async pattern"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Implement a thread-safe LRU cache without using Collections.synchronizedMap",
+    "Explain why double-checked locking was broken before Java 5",
+    "Design a rate limiter using concurrent primitives",
+    "How does ConcurrentHashMap achieve thread safety without locking the entire map?",
+    "When would you use Virtual Threads vs Platform Threads?",
+    "Explain the ABA problem and how to solve it",
+    "What's the difference between ReentrantLock and synchronized keyword?",
+    "How do you handle backpressure in reactive systems?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.baeldung.com/java-concurrency",
+      "https://jenkov.com/tutorials/java-concurrency/index.html",
+      "https://www.oracle.com/java/technologies/javase/concurrency-overview.html"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=eQyovV-g1iI",
+      "https://www.youtube.com/watch?v=A12h0_G-h48"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/problems/print-in-order/",
+      "https://leetcode.com/problems/print-foobar-alternately/",
+      "https://leetcode.com/problems/building-h2o/"
+    ]
+  }
+}

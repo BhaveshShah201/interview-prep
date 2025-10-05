@@ -1,0 +1,90 @@
+{
+  "title": "JPA & Hibernate Internals",
+  "subtopics": [
+    {
+      "name": "Entity Management",
+      "details": [
+        "Entity lifecycle and state transitions",
+        "First-level cache (Session cache)",
+        "Second-level cache (Ehcache, Hazelcast)",
+        "Query cache",
+        "Cache eviction strategies",
+        "Entity state management",
+        "Persistence context",
+        "Entity relationships and mappings",
+        "Lazy loading and N+1 problems",
+        "Entity event listeners"
+      ]
+    },
+    {
+      "name": "Performance Tuning",
+      "details": [
+        "N+1 query problem solutions",
+        "Batch fetching",
+        "Lazy vs Eager loading",
+        "Fetch join strategies",
+        "DTO projections",
+        "StatelessSession for batch operations",
+        "Query optimization techniques",
+        "Connection pool tuning",
+        "Hibernate statistics and metrics",
+        "SQL logging and analysis"
+      ]
+    },
+    {
+      "name": "Advanced Mappings",
+      "details": [
+        "Inheritance strategies (Single Table, Joined, Table per Class)",
+        "Composite keys",
+        "Embeddable objects",
+        "Element collections",
+        "Custom types and converters",
+        "Formula mappings",
+        "Collection mappings",
+        "Association mappings",
+        "Mapping inheritance hierarchies",
+        "Embedding value objects"
+      ]
+    },
+    {
+      "name": "Concurrency",
+      "details": [
+        "Optimistic locking (@Version)",
+        "Pessimistic locking",
+        "LockModeType strategies",
+        "Concurrency control patterns",
+        "Transaction isolation in JPA",
+        "Lock timeout handling",
+        "Pessimistic vs optimistic trade-offs",
+        "Lock escalation",
+        "Deadlock prevention",
+        "Versioned entities"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "How do you detect and fix N+1 queries in production?",
+    "Design an optimal caching strategy for a read-heavy system",
+    "Explain Hibernate's dirty checking mechanism",
+    "How would you batch insert 1 million records efficiently?",
+    "What's the difference between @JoinColumn and @JoinTable?",
+    "How do you handle inheritance in JPA?",
+    "Explain the different fetch strategies in JPA",
+    "When would you use @ElementCollection vs @OneToMany?"
+  ],
+  "resources": {
+    "articles": [
+      "https://www.baeldung.com/hibernate-series",
+      "https://thorben-janssen.com/hibernate-tips/",
+      "https://vladmihalcea.com/tutorials/hibernate/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=S5S6z_iQc_A",
+      "https://www.youtube.com/watch?v=OFs_d_xP_vQ"
+    ],
+    "practice_problems": [
+      "https://github.com/vladmihalcea/high-performance-java-persistence",
+      "https://www.udemy.com/course/hibernate-and-jpa-fundamentals/"
+    ]
+  }
+}

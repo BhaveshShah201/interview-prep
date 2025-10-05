@@ -1,0 +1,75 @@
+{
+  "title": "Cost Optimization & FinOps",
+  "subtopics": [
+    {
+      "name": "Cloud Cost Management",
+      "details": [
+        "Cloud cost visibility and reporting",
+        "Resource tagging and allocation",
+        "Rightsizing compute and storage",
+        "Identifying idle and underutilized resources",
+        "Leveraging reserved instances and savings plans",
+        "Spot instances for fault-tolerant workloads",
+        "Data transfer cost optimization",
+        "Managed services vs self-managed costs",
+        "Multi-cloud cost management strategies",
+        "Budgeting and cost anomaly detection"
+      ]
+    },
+    {
+      "name": "Application Efficiency",
+      "details": [
+        "Code optimization for cloud resources",
+        "Architectural patterns for cost efficiency (serverless, microservices)",
+        "Database performance tuning and scaling",
+        "Caching strategies to reduce load",
+        "Optimizing data storage and access patterns",
+        "Efficient logging and monitoring practices",
+        "Network traffic optimization",
+        "Choosing cost-effective programming languages and frameworks",
+        "Performance testing for cost impact",
+        "Continuous optimization in CI/CD pipelines"
+      ]
+    },
+    {
+      "name": "FinOps Practices",
+      "details": [
+        "FinOps principles and culture",
+        "Collaboration between engineering, finance, and business",
+        "Cost accountability and ownership",
+        "Centralized FinOps team functions",
+        "Automating cost governance and policies",
+        "Forecasting and budgeting cloud spend",
+        "Showback and chargeback models",
+        "Unit economics and business value alignment",
+        "Cloud financial management tools",
+        "Continuous improvement in cloud spending"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a FinOps strategy for a rapidly growing cloud-native startup.",
+    "How would you identify and reduce cloud waste in a large enterprise environment?",
+    "Explain the key differences between traditional IT cost management and FinOps.",
+    "How do you foster a culture of cost awareness within engineering teams?",
+    "Propose a strategy for optimizing data transfer costs in a multi-region application.",
+    "How would you implement a showback/chargeback model for cloud resources?",
+    "What metrics would you track to measure the effectiveness of your cost optimization efforts?",
+    "Describe a scenario where a technical decision had a significant impact on cloud costs, and how you addressed it."
+  ],
+  "resources": {
+    "articles": [
+      "https://www.finops.org/",
+      "https://aws.amazon.com/aws-cost-management/",
+      "https://cloud.google.com/blog/topics/cost-optimization"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=W_p22w6A1P8",
+      "https://www.youtube.com/watch?v=05B_x_s-g0Q"
+    ],
+    "practice_problems": [
+      "https://www.finops.org/resources/",
+      "https://cloud.google.com/learn/training/cloud-financial-management"
+    ]
+  }
+}

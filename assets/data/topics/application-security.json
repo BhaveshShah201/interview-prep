@@ -1,0 +1,90 @@
+{
+  "title": "Application Security",
+  "subtopics": [
+    {
+      "name": "OWASP Top 10",
+      "details": [
+        "Injection attacks (SQL, NoSQL, LDAP)",
+        "Broken authentication",
+        "XSS (Cross-Site Scripting)",
+        "CSRF (Cross-Site Request Forgery)",
+        "Security misconfiguration",
+        "Sensitive data exposure",
+        "Security testing",
+        "Security awareness",
+        "Vulnerability management",
+        "Security scanning"
+      ]
+    },
+    {
+      "name": "Secure Coding",
+      "details": [
+        "Input validation",
+        "Output encoding",
+        "Parameterized queries",
+        "Principle of least privilege",
+        "Defense in depth",
+        "Secure API design",
+        "Authentication patterns",
+        "Authorization patterns",
+        "Security frameworks",
+        "Security libraries"
+      ]
+    },
+    {
+      "name": "Authentication & Authorization",
+      "details": [
+        "OAuth 2.0 flows",
+        "JWT best practices",
+        "SAML for enterprise SSO",
+        "Multi-factor authentication",
+        "RBAC vs ABAC",
+        "Identity providers",
+        "Session management",
+        "Token management",
+        "Permission systems",
+        "Access control models"
+      ]
+    },
+    {
+      "name": "API Security",
+      "details": [
+        "API key management",
+        "Rate limiting",
+        "Request signing",
+        "Certificate pinning",
+        "HTTPS/TLS configuration",
+        "API gateway security",
+        "Authentication for APIs",
+        "Authorization for APIs",
+        "API vulnerability scanning",
+        "API security monitoring"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "How would you secure a public API?",
+    "Design an authentication system for a multi-tenant SaaS",
+    "How do you prevent credential leaks in microservices?",
+    "Explain how you'd implement zero-trust security",
+    "How do you prevent SQL injection?",
+    "How do you implement proper session management?",
+    "How do you secure JWT tokens?",
+    "How do you handle secrets in distributed systems?"
+  ],
+  "resources": {
+    "articles": [
+      "https://owasp.org/www-project-top-ten/",
+      "https://www.veracode.com/security/application-security",
+      "https://snyk.io/learn/application-security/"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=tna-o-q0u1c",
+      "https://www.youtube.com/watch?v=W-p22w6A1P8"
+    ],
+    "practice_problems": [
+      "https://owasp.org/www-project-juice-shop/",
+      "https://portswigger.net/web-security"
+    ]
+  }
+}

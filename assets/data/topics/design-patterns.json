@@ -1,0 +1,90 @@
+{
+  "title": "Gang of Four + Enterprise Patterns",
+  "subtopics": [
+    {
+      "name": "Creational (Advanced)",
+      "details": [
+        "Thread-safe Singleton (5 implementations)",
+        "Abstract Factory for multi-database support",
+        "Prototype with deep cloning",
+        "Object Pool pattern",
+        "Multiton pattern",
+        "Builder pattern with step builders",
+        "Factory Method vs Abstract Factory",
+        "Creational patterns and dependency injection",
+        "Creational patterns in Spring framework",
+        "Creational anti-patterns and performance"
+      ]
+    },
+    {
+      "name": "Structural (Production)",
+      "details": [
+        "Decorator vs Proxy (when to use each)",
+        "Flyweight for memory optimization",
+        "Composite for hierarchical data",
+        "Bridge for platform abstraction",
+        "Facade for legacy system integration",
+        "Adapter and wrapper patterns",
+        "Structural patterns in API design",
+        "Adapter patterns for legacy integration",
+        "Structural patterns performance impact",
+        "Combining multiple structural patterns"
+      ]
+    },
+    {
+      "name": "Behavioral (Real-world)",
+      "details": [
+        "Strategy with Spring's bean injection",
+        "Observer pattern vs Event-driven systems",
+        "Command pattern for undo/redo",
+        "Interpreter for DSL design",
+        "Mediator for complex workflows",
+        "State machine implementations",
+        "Template Method and framework design",
+        "Visitor pattern for operations on structures",
+        "Iterator and composite pattern combination",
+        "Behavioral patterns in event sourcing"
+      ]
+    },
+    {
+      "name": "Concurrency Patterns",
+      "details": [
+        "Thread Pool pattern",
+        "Active Object",
+        "Monitor Object",
+        "Half-Sync/Half-Async",
+        "Leader-Follower",
+        "Thread-Specific Storage",
+        "Guarded Suspension",
+        "Thread-Local Storage",
+        "Message Queue patterns",
+        "Producer-Consumer variations"
+      ]
+    }
+  ],
+  "faang_questions": [
+    "Design a plugin system using multiple design patterns",
+    "Implement Strategy pattern without if-else using Spring",
+    "How does Hibernate use Proxy pattern? Can you implement similar logic?",
+    "Design a rule engine using Chain of Responsibility + Strategy",
+    "When would you use Observer vs Mediator pattern?",
+    "Explain the difference between Adapter, Decorator, and Facade patterns",
+    "How do you implement a thread-safe Singleton?",
+    "Design a state machine for order processing using design patterns"
+  ],
+  "resources": {
+    "articles": [
+      "https://refactoring.guru/design-patterns",
+      "https://www.baeldung.com/design-patterns-series",
+      "https://www.enterpriseintegrationpatterns.com/patterns/messaging/"
+    ],
+    "videos": [
+      "https://www.youtube.com/playlist?list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc",
+      "https://www.youtube.com/watch?v=tv-_1er1mWI"
+    ],
+    "practice_problems": [
+      "https://leetcode.com/discuss/general-discussion/1092968/Design-Patterns-for-LeetCode-Problems",
+      "https://www.hackerrank.com/domains/java/design-patterns"
+    ]
+  }
+}
